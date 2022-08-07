@@ -21,6 +21,11 @@
     "eslint-plugin-react": "^7.30.1",
     "react-scripts": "^5.0.1"
   },
+  "lint-staged": {
+    "src/*.{js,jsx,ts,tsx,json,css,scss,md}": [
+      "prettier --write"
+    ]
+  },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
@@ -39,11 +44,7 @@
       "pre-commit": "lint-staged"
     }
   },
-  "lint-staged": {
-    "src/**/*.{js,jsx,ts,tsx,json,css,scss,md}": [
-      "prettier --write"
-    ]
-  },
+
   "browserslist": {
     "production": [
       ">0.2%",
