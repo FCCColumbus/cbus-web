@@ -19,7 +19,8 @@
     "@typescript-eslint/parser": "^5.31.0",
     "eslint": "^8.20.0",
     "eslint-plugin-react": "^7.30.1",
-    "react-scripts": "^5.0.1"
+    "react-scripts": "^5.0.1",
+    "husky": "^8.0.0"
   },
   "lint-staged": {
     "src/*.{js,jsx,ts,tsx,json,css,scss,md}": [
@@ -31,7 +32,8 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "lint": "eslint ."
+    "lint": "eslint .",
+    "prepare": "husky install"
   },
   "eslintConfig": {
     "extends": [
@@ -44,7 +46,6 @@
       "pre-commit": "lint-staged"
     }
   },
-
   "browserslist": {
     "production": [
       ">0.2%",
