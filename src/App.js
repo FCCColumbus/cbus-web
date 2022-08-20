@@ -5,7 +5,6 @@ function App() {
     <div className="App">
       <h1>Hello World!!! </h1>
       <a aria-hidden> Click me! </a>
-      <a aria-hidden> Click me! </a>
     </div>
   );
 }
