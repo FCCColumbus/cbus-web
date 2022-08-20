@@ -4,7 +4,7 @@ function App() {
   return (
     <div className="App">
       <h1>Hello World!!! </h1>
-      <a />
+      <a aria-hidden> Click me! </a>
     </div>
   );
 }
