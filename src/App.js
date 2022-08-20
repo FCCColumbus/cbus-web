@@ -4,7 +4,8 @@ function App() {
   return (
     <div className="App">
       <h1>Hello World!!! </h1>
-      <a aria-hidden> Click me! </a>
+      <a aria-hidden> should fail linting </a>
+      <a aria-hidden> should fail linting </a>
     </div>
   );
 }

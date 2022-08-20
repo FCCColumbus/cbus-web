@@ -23,9 +23,9 @@
   },
   "lint-staged": {
     "src/**/*.{js,jsx,ts,tsx,json,css,scss,md}": [
-      "eslint .",
       "prettier --write"
-    ]
+    ],
+    "*.js": "eslint"
   },
   "scripts": {
     "start": "react-scripts start",
