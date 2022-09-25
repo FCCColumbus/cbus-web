@@ -1,6 +1,14 @@
 import { render, screen } from "@testing-library/react";
 import App from "./App";
 
+/*
+test("renders Hello World!", () => {
+  render(<App />);
+  const linkElement = screen.getByText(/Hello World/i);
+  expect(linkElement).toBeInTheDocument();
+});
+*/
+
 test("has a description of what the group is", () => {
   render(<App />)
 
@@ -17,3 +25,12 @@ test("has link to freecodecamp website", () => {
 })
 
 
+
+test("has link to discord server", () => {
+  const { container } = render(<App />)
+
+  const link = container.querySelectorAll('a').find(l => {
+    if (l.href.contains('netlify')) return l
+  })
+  expect(link).toBeInTheDocument()
+})
