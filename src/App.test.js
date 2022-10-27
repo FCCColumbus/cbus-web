@@ -9,28 +9,36 @@ test("renders Hello World!", () => {
 });
 */
 
-test("has a description of what the group is", () => {
-  render(<App />)
 
-  const div = screen.getByText(/is a /i)
+test("has a description of what the group is", () => {
+  const { container } = render(<App />)
+
+  const div = container.querySelector('.description')
   expect(div).toBeInTheDocument()
   expect(div).not.toBeEmptyDOMElement()
 })
-
-test("has link to freecodecamp website", () => {
-  const { container } = render(<App />)
-
-  const link = container.querySelector('a href="https://www.freecodecamp.org/"')
-  expect(link).toBeInTheDocument()
-})
-
 
 
 test("has link to discord server", () => {
   const { container } = render(<App />)
 
-  const link = container.querySelectorAll('a').find(l => {
-    if (l.href.contains('netlify')) return l
+  const links = container.querySelectorAll('a')
+  let linkExists = false
+  links.forEach(link => {
+    if (link.attributes['href'].value.includes('discord')) linkExists = true
   })
-  expect(link).toBeInTheDocument()
+  expect(linkExists).toBeTruthy()
+  
+})
+
+test("has link to freecodecamp.org", () => {
+  const { container } = render(<App />)
+
+  const links = container.querySelectorAll('a')
+  let linkExists = false
+  links.forEach(link => {
+    if (link.attributes['href'].value.includes('freecodecamp.org')) linkExists = true
+  })
+  expect(linkExists).toBeTruthy()
+  
 })
