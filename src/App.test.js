@@ -42,3 +42,28 @@ test("has link to freecodecamp.org", () => {
   expect(linkExists).toBeTruthy()
   
 })
+
+test("has link to github.org", () => {
+  const { container } = render(<App />)
+
+  const links = container.querySelectorAll('a')
+  let linkExists = false
+  links.forEach(link => {
+    if (link.attributes['href'].value.includes('github.com')) linkExists = true
+  })
+  expect(linkExists).toBeTruthy()
+})
+
+test("has events", () => {
+  const { container } = render(<App />)
+  
+  const event = container.querySelector('.event')
+  expect(event).toBeInTheDocument()
+})
+
+test("has footer", () => {
+  const { container } = render(<App />)
+  const footer = container.querySelector('footer')
+  expect(footer).toBeInTheDocument()
+})
+
