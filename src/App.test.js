@@ -3,35 +3,35 @@ import App from "./App";
 
 describe("App", () => {
   describe("renders external links", () => {
-    it("has link to Discord homepage", () => {
+    it("Discord homepage", () => {
       const { container } = render(<App />);
 
       const links = container.querySelectorAll('a');
       let linkExists = false;
       links.forEach(link => {
-        if (link.attributes['href'].value.includes('discord.gg')) linkExists = true
+        if (link.attributes.href.value.includes('discord.gg')) linkExists = true
       });
       expect(linkExists).toBeTruthy();
     });
 
-    it("has link to freeCodeCamp.org homepage", () => {
+    it("freeCodeCamp.org homepage", () => {
       const { container } = render(<App />);
 
       const links = container.querySelectorAll('a');
       let linkExists = false;
       links.forEach(link => {
-        if (link.attributes['href'].value.includes('freecodecamp.org')) linkExists = true
+        if (link.attributes.href.value.includes('freecodecamp.org')) linkExists = true
       });
       expect(linkExists).toBeTruthy();
     });
 
-    it("has link to FCCColumbus Github profile", () => {
+    it("FCCColumbus Github profile", () => {
       const { container } = render(<App />);
 
       const links = container.querySelectorAll('a');
       let linkExists = false;
       links.forEach(link => {
-        if (link.attributes['href'].value.includes('github.com/FCCColumbus')) linkExists = true
+        if (link.attributes.href.value.includes('github.com/FCCColumbus')) linkExists = true
       });
       expect(linkExists).toBeTruthy();
     });
