@@ -1,37 +1,41 @@
 import { render } from "@testing-library/react";
 import App from "./App";
 
-test("has link to Discord homepage", () => {
-  const { container } = render(<App />);
+describe("App", () => {
+  describe("renders external links", () => {
+    it("has link to Discord homepage", () => {
+      const { container } = render(<App />);
 
-  const links = container.querySelectorAll('a');
-  let linkExists = false;
-  links.forEach(link => {
-    if (link.attributes['href'].value.includes('discord.gg')) linkExists = true
+      const links = container.querySelectorAll('a');
+      let linkExists = false;
+      links.forEach(link => {
+        if (link.attributes['href'].value.includes('discord.gg')) linkExists = true
+      });
+      expect(linkExists).toBeTruthy();
+    });
+
+    it("has link to freeCodeCamp.org homepage", () => {
+      const { container } = render(<App />);
+
+      const links = container.querySelectorAll('a');
+      let linkExists = false;
+      links.forEach(link => {
+        if (link.attributes['href'].value.includes('freecodecamp.org')) linkExists = true
+      });
+      expect(linkExists).toBeTruthy();
+    });
+
+    it("has link to FCCColumbus Github profile", () => {
+      const { container } = render(<App />);
+
+      const links = container.querySelectorAll('a');
+      let linkExists = false;
+      links.forEach(link => {
+        if (link.attributes['href'].value.includes('github.com/FCCColumbus')) linkExists = true
+      });
+      expect(linkExists).toBeTruthy();
+    });
   });
-  expect(linkExists).toBeTruthy();
-});
-
-test("has link to freeCodeCamp.org homepage", () => {
-  const { container } = render(<App />);
-
-  const links = container.querySelectorAll('a');
-  let linkExists = false;
-  links.forEach(link => {
-    if (link.attributes['href'].value.includes('freecodecamp.org')) linkExists = true
-  });
-  expect(linkExists).toBeTruthy();
-});
-
-test("has link to FCCColumbus Github profile", () => {
-  const { container } = render(<App />);
-
-  const links = container.querySelectorAll('a');
-  let linkExists = false;
-  links.forEach(link => {
-    if (link.attributes['href'].value.includes('github.com/FCCColumbus')) linkExists = true
-  });
-  expect(linkExists).toBeTruthy();
 });
 
 xtest("has a description of what the group is", () => {
