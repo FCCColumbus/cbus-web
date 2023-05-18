@@ -20,7 +20,7 @@ function Events() {
 
     return (
         <>
-            <div id="events-section" className="events">
+            <div id="events" className="events">
                 <h3>Upcoming Events</h3>
                 <div id="events-placeholder-text">
                     The &quot;Events&quot; section is under development.

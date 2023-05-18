@@ -1,6 +1,6 @@
 function About() {
     return (
-        <div id="about-section" className="about">
+        <div id="about" className="about">
             <h2>About</h2>
             <p>Whether you are a beginner, or a pro, there is always something new to learn, or someone new to meet.</p>
             <h3>Here is why you should come</h3>
