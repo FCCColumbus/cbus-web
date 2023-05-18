@@ -19,7 +19,7 @@ function Events() {
 
     return (
         <>
-            <div className="events">
+            <div id="events-section" className="events">
                 <h3>Upcoming Events</h3>
                 {events.map((event, i) => <Event event={event} key={event.id} id={i} />)}
             </div>
