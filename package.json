@@ -27,7 +27,8 @@
     "eslint-plugin-react": "^7.28.0",
     "eslint-plugin-react-hooks": "^4.3.0",
     "husky": "^8.0.0",
-    "react-scripts": "^5.0.1"
+    "react-scripts": "^5.0.1",
+    "react-test-renderer": "^18.2.0"
   },
   "overrides": {
     "@svgr/webpack": "$@svgr/webpack"

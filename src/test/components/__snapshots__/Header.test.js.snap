@@ -1,0 +1,72 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Header renders 1`] = `
+<header>
+  <nav>
+    <ul>
+      <li>
+        <a
+          href="/"
+        >
+          <img
+            alt="fcc logo"
+            className="header-logo"
+            src="/fcc-logo.svg"
+          />
+        </a>
+      </li>
+      <li>
+        <a
+          href="#about"
+        >
+          About
+        </a>
+      </li>
+      <li>
+        <a
+          href="https://www.freecodecamp.org/"
+        >
+          FreeCodeCamp
+        </a>
+      </li>
+      <li>
+        <a
+          href="https://discord.gg"
+        >
+          Discord
+        </a>
+      </li>
+      <li>
+        <a
+          href="https://github.com/FCCColumbus"
+        >
+          GitHub
+        </a>
+      </li>
+      <li>
+        <a
+          href="#events"
+        >
+          Events
+        </a>
+      </li>
+      <li>
+        <a
+          href="https://github.com/FCCColumbus/cbus-web/graphs/contributors"
+        >
+          Contributors
+        </a>
+      </li>
+    </ul>
+  </nav>
+  <h1>
+    free code camp
+    <img
+      alt="fcc logo"
+      className="big-logo"
+      src="free-code-camp-logo.svg"
+    />
+     columbus
+  </h1>
+</header>
+`;
