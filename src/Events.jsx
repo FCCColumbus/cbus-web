@@ -19,23 +19,20 @@ function Events() {
     // }]
 
     return (
-        <>
-            <div id="events" className="events">
-                <h3>Upcoming Events</h3>
-                <div id="events-placeholder-text">
-                    The &quot;Events&quot; section is under development.
-                    <br /><br />
-                    In the meantime, please visit
-                    <br />
-                    <a href="https://www.meetup.com/techlifecolumbus/events/">https://www.meetup.com/techlifecolumbus/events/</a>
-                    <br />
-                    and look for FreeCodeCamp Columbus events there!
-                </div>
-                {/* The array mapping below is retained for future reference. */}
-                {/* {events.map((event, i) => <Event event={event} key={event.id} id={i} />)} */}
+        <div id="events" className="events">
+            <h3>Upcoming Events</h3>
+            <div id="events-placeholder-text">
+                The &quot;Events&quot; section is under development.
+                <br /><br />
+                In the meantime, please visit
+                <br />
+                <a href="https://www.meetup.com/techlifecolumbus/events/">https://www.meetup.com/techlifecolumbus/events/</a>
+                <br />
+                and look for FreeCodeCamp Columbus events there!
             </div>
-            <img src='/divider.jpg' alt='code on a screen. mostly css' />
-        </>
+            {/* The array mapping below is retained for future reference. */}
+            {/* {events.map((event, i) => <Event event={event} key={event.id} id={i} />)} */}
+        </div>
     );
 }
 

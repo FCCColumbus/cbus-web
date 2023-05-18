@@ -13,6 +13,7 @@ function App() {
       <Splash />
       <About />
       <Events />
+      <img src='/divider.jpg' alt='code on a screen. mostly css' />
       <Members />
       <Footer />
     </div>
