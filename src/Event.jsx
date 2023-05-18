@@ -1,5 +1,3 @@
-
-
 function Event({ event, id }) {
     const href = `/coding-${id + 1}.jpg`
 

@@ -1,5 +1,3 @@
-
-
 function About() {
     return (
         <div className="about">
@@ -16,10 +14,10 @@ function About() {
                     <li><b>☛</b > Get real-world experience building projects that help local nonprofits.</li>
                     <li><b>☛</b > Get a free certificate of completion.</li>
                     <li><b>☛</b > Assemble a portfolio of real apps used by real people.</li>
-
                 </ul>
             </div>
         </div >
-    )
+    );
 }
-export default About
+
+export default About;

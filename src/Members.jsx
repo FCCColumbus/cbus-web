@@ -1,5 +1,3 @@
-
-
 function Members() {
     const admin = [
         { name: 'John', imgUrl: '/head.png' },
@@ -15,7 +13,7 @@ function Members() {
         { name: 'Kellan', imgUrl: '/head.png' },
     ]
     return (
-        <>
+        <div>
             <div className="members">
                 <h3>Meet the Admins</h3>
                 <div className="row">
@@ -38,9 +36,8 @@ function Members() {
                     )}
                 </div>
             </div>
-        </>
-    )
-
+        </div>
+    );
 }
 
 export default Members
