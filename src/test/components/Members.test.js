@@ -1,6 +1,6 @@
 import renderer from "react-test-renderer";
 
-import Members from "../../Members";
+import Members from "../../components/Members";
 
 describe("Members", () => {
     it("renders", () => {

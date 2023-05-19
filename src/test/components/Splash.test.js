@@ -1,6 +1,6 @@
 import renderer from "react-test-renderer";
 
-import Splash from "../../Splash";
+import Splash from "../../components/Splash";
 
 describe("Splash", () => {
     it("renders", () => {

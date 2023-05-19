@@ -1,6 +1,6 @@
 import renderer from "react-test-renderer";
 
-import Event from "../../Event";
+import Event from "../../components/Event";
 
 describe("Event", () => {
     it("renders", () => {

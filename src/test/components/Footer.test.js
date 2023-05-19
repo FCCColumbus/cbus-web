@@ -1,6 +1,6 @@
 import renderer from "react-test-renderer";
 
-import Footer from "../../Footer";
+import Footer from "../../components/Footer";
 
 describe("Footer", () => {
     it("renders", () => {
