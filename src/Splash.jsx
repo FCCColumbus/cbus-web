@@ -1,5 +1,3 @@
-
-
 function Splash() {
     return (
         <div className="splash">
