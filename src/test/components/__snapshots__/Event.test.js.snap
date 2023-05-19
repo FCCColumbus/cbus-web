@@ -1,0 +1,43 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Event renders 1`] = `
+<div
+  className="event"
+>
+  <img
+    alt="people coding"
+    className="event-img"
+    src="/coding-NaN.jpg"
+  />
+  <div
+    className="info"
+  >
+    <h5>
+      Test Event
+    </h5>
+    <table>
+      <tbody>
+        <tr>
+          <th>
+            time:
+          </th>
+          <td>
+            Apr 17, 2023, 6:30 PM
+          </td>
+        </tr>
+        <tr>
+          <th>
+            location:
+          </th>
+          <td>
+            Test Location
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <p>
+      This is a test event.
+    </p>
+  </div>
+</div>
+`;
