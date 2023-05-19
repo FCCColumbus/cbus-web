@@ -7,17 +7,17 @@ import Members from './components/Members';
 import Footer from './components/Footer'
 
 function App() {
-    return (
-        <div className="App">
-            <Header />
-            <Splash />
-            <About />
-            <Events />
-            <img src='/divider.jpg' alt='code on a screen. mostly css' />
-            <Members />
-            <Footer />
-        </div>
-    );
+  return (
+    <div className="App">
+      <Header />
+      <Splash />
+      <About />
+      <Events />
+      <img src='/divider.jpg' alt='code on a screen. mostly css' />
+      <Members />
+      <Footer />
+    </div>
+  );
 }
 
 export default App;
