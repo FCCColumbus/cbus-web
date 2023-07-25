@@ -1,0 +1,56 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Footer renders 1`] = `
+<footer>
+  <nav>
+    <ul>
+      <li>
+        <a
+          href="#about"
+        >
+          About
+        </a>
+      </li>
+      <li>
+        <a
+          href="https://www.freecodecamp.org/"
+        >
+          FreeCodeCamp
+        </a>
+      </li>
+      <li>
+        <a
+          href="https://discord.gg"
+        >
+          Discord
+        </a>
+      </li>
+      <li>
+        <a
+          href="https://github.com/FCCColumbus"
+        >
+          GitHub
+        </a>
+      </li>
+      <li>
+        <a
+          href="#events"
+        >
+          Events
+        </a>
+      </li>
+      <li>
+        <a
+          href="https://github.com/FCCColumbus/cbus-web/graphs/contributors"
+        >
+          Contributors
+        </a>
+      </li>
+    </ul>
+  </nav>
+  <p>
+    Copyright Free Code Camp Columbus 2023 - 
+    2023
+  </p>
+</footer>
+`;
