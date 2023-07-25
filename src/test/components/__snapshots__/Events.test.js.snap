@@ -1,0 +1,28 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Events renders 1`] = `
+<div
+  className="events"
+  id="events"
+>
+  <h3>
+    Upcoming Events
+  </h3>
+  <div
+    id="events-placeholder-text"
+  >
+    The "Events" section is under development.
+    <br />
+    <br />
+    In the meantime, please visit
+    <br />
+    <a
+      href="https://www.meetup.com/techlifecolumbus/events/"
+    >
+      https://www.meetup.com/techlifecolumbus/events/
+    </a>
+    <br />
+    and look for FreeCodeCamp Columbus events there!
+  </div>
+</div>
+`;

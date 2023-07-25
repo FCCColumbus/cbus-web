@@ -1,12 +1,21 @@
 import './App.css';
+import Header from './components/Header';
+import Splash from './components/Splash';
+import About from './components/About';
+import Events from './components/Events'
+import Members from './components/Members';
+import Footer from './components/Footer'
 
 function App() {
   return (
     <div className="App">
-     <img alt="substitute logo" src="/temp_logo.png"/>
-
-      <a href="https://www.netlify.com"> <img src="https://www.netlify.com/v3/img/components/netlify-color-accent.svg" alt="Deploys by Netlify" /> </a>
-
+      <Header />
+      <Splash />
+      <About />
+      <Events />
+      <img src='/divider.jpg' alt='code on a screen. mostly css' />
+      <Members />
+      <Footer />
     </div>
   );
 }
