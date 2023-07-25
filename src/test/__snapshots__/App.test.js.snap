@@ -1,0 +1,355 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`App renders 1`] = `
+<div
+  className="App"
+>
+  <header>
+    <nav>
+      <ul>
+        <li>
+          <a
+            href="/"
+          >
+            <img
+              alt="fcc logo"
+              className="header-logo"
+              src="/fcc-logo.svg"
+            />
+          </a>
+        </li>
+        <li>
+          <a
+            href="#about"
+          >
+            About
+          </a>
+        </li>
+        <li>
+          <a
+            href="https://www.freecodecamp.org/"
+          >
+            FreeCodeCamp
+          </a>
+        </li>
+        <li>
+          <a
+            href="https://discord.gg"
+          >
+            Discord
+          </a>
+        </li>
+        <li>
+          <a
+            href="https://github.com/FCCColumbus"
+          >
+            GitHub
+          </a>
+        </li>
+        <li>
+          <a
+            href="#events"
+          >
+            Events
+          </a>
+        </li>
+        <li>
+          <a
+            href="https://github.com/FCCColumbus/cbus-web/graphs/contributors"
+          >
+            Contributors
+          </a>
+        </li>
+      </ul>
+    </nav>
+    <h1>
+      free code camp
+      <img
+        alt="fcc logo"
+        className="big-logo"
+        src="free-code-camp-logo.svg"
+      />
+       columbus
+    </h1>
+  </header>
+  <div
+    className="splash"
+  >
+    <div
+      className="byline"
+    >
+      <h2>
+        Free Code Camp is the local chapter of FCC, the best way to learn coding for free!
+      </h2>
+    </div>
+    <img
+      alt="people having fun coding"
+      src="/cottonbro-studio.jpg"
+    />
+  </div>
+  <div
+    className="about"
+    id="about"
+  >
+    <h2>
+      About
+    </h2>
+    <p>
+      Whether you are a beginner, or a pro, there is always something new to learn, or someone new to meet.
+    </p>
+    <h3>
+      Here is why you should come
+    </h3>
+    <div
+      className="center"
+    >
+      <ul
+        className="come"
+      >
+        <li>
+          <b>
+            ☛
+          </b>
+           Get help in real time from our community Discord page.
+        </li>
+        <li>
+          <b>
+            ☛
+          </b>
+           Meet up with other techie Columbusites.
+        </li>
+        <li>
+          <b>
+            ☛
+          </b>
+           Learn to code at your own pace, in your browser or on your phone.
+        </li>
+        <li>
+          <b>
+            ☛
+          </b>
+           Work through our focused, interactive courses and tutorials.
+        </li>
+        <li>
+          <b>
+            ☛
+          </b>
+           Learn state-of-the-art full stack JavaScript tutorials.
+        </li>
+        <li>
+          <b>
+            ☛
+          </b>
+           Get real-world experience building projects that help local nonprofits.
+        </li>
+        <li>
+          <b>
+            ☛
+          </b>
+           Get a free certificate of completion.
+        </li>
+        <li>
+          <b>
+            ☛
+          </b>
+           Assemble a portfolio of real apps used by real people.
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div
+    className="events"
+    id="events"
+  >
+    <h3>
+      Upcoming Events
+    </h3>
+    <div
+      id="events-placeholder-text"
+    >
+      The "Events" section is under development.
+      <br />
+      <br />
+      In the meantime, please visit
+      <br />
+      <a
+        href="https://www.meetup.com/techlifecolumbus/events/"
+      >
+        https://www.meetup.com/techlifecolumbus/events/
+      </a>
+      <br />
+      and look for FreeCodeCamp Columbus events there!
+    </div>
+  </div>
+  <img
+    alt="code on a screen. mostly css"
+    src="/divider.jpg"
+  />
+  <div>
+    <div
+      className="members"
+    >
+      <h3>
+        Meet the Admins
+      </h3>
+      <div
+        className="row"
+      >
+        <div>
+          <img
+            alt="beautiful headshot of John."
+            className="admin"
+            src="/head.png"
+          />
+          <h4>
+            John
+          </h4>
+        </div>
+        <div>
+          <img
+            alt="beautiful headshot of Amy."
+            className="admin"
+            src="/head.png"
+          />
+          <h4>
+            Amy
+          </h4>
+        </div>
+        <div>
+          <img
+            alt="beautiful headshot of Kevin."
+            className="admin"
+            src="/head.png"
+          />
+          <h4>
+            Kevin
+          </h4>
+        </div>
+      </div>
+    </div>
+    <div
+      className="members"
+    >
+      <h3>
+        Meet the Contributors
+      </h3>
+      <div
+        className="row"
+      >
+        <div>
+          <img
+            alt="beautiful headshot of John."
+            className="member"
+            src="/head.png"
+          />
+          <h4>
+            John
+          </h4>
+        </div>
+        <div>
+          <img
+            alt="beautiful headshot of Ismael."
+            className="member"
+            src="/head.png"
+          />
+          <h4>
+            Ismael
+          </h4>
+        </div>
+        <div>
+          <img
+            alt="beautiful headshot of Nirvignesh."
+            className="member"
+            src="/head.png"
+          />
+          <h4>
+            Nirvignesh
+          </h4>
+        </div>
+        <div>
+          <img
+            alt="beautiful headshot of Tijana."
+            className="member"
+            src="/head.png"
+          />
+          <h4>
+            Tijana
+          </h4>
+        </div>
+        <div>
+          <img
+            alt="beautiful headshot of Jennifer."
+            className="member"
+            src="/head.png"
+          />
+          <h4>
+            Jennifer
+          </h4>
+        </div>
+        <div>
+          <img
+            alt="beautiful headshot of Kellan."
+            className="member"
+            src="/head.png"
+          />
+          <h4>
+            Kellan
+          </h4>
+        </div>
+      </div>
+    </div>
+  </div>
+  <footer>
+    <nav>
+      <ul>
+        <li>
+          <a
+            href="#about"
+          >
+            About
+          </a>
+        </li>
+        <li>
+          <a
+            href="https://www.freecodecamp.org/"
+          >
+            FreeCodeCamp
+          </a>
+        </li>
+        <li>
+          <a
+            href="https://discord.gg"
+          >
+            Discord
+          </a>
+        </li>
+        <li>
+          <a
+            href="https://github.com/FCCColumbus"
+          >
+            GitHub
+          </a>
+        </li>
+        <li>
+          <a
+            href="#events"
+          >
+            Events
+          </a>
+        </li>
+        <li>
+          <a
+            href="https://github.com/FCCColumbus/cbus-web/graphs/contributors"
+          >
+            Contributors
+          </a>
+        </li>
+      </ul>
+    </nav>
+    <p>
+      Copyright Free Code Camp Columbus 2023 - 
+      2023
+    </p>
+  </footer>
+</div>
+`;

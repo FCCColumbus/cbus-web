@@ -1,0 +1,118 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Members renders 1`] = `
+<div>
+  <div
+    className="members"
+  >
+    <h3>
+      Meet the Admins
+    </h3>
+    <div
+      className="row"
+    >
+      <div>
+        <img
+          alt="beautiful headshot of John."
+          className="admin"
+          src="/head.png"
+        />
+        <h4>
+          John
+        </h4>
+      </div>
+      <div>
+        <img
+          alt="beautiful headshot of Amy."
+          className="admin"
+          src="/head.png"
+        />
+        <h4>
+          Amy
+        </h4>
+      </div>
+      <div>
+        <img
+          alt="beautiful headshot of Kevin."
+          className="admin"
+          src="/head.png"
+        />
+        <h4>
+          Kevin
+        </h4>
+      </div>
+    </div>
+  </div>
+  <div
+    className="members"
+  >
+    <h3>
+      Meet the Contributors
+    </h3>
+    <div
+      className="row"
+    >
+      <div>
+        <img
+          alt="beautiful headshot of John."
+          className="member"
+          src="/head.png"
+        />
+        <h4>
+          John
+        </h4>
+      </div>
+      <div>
+        <img
+          alt="beautiful headshot of Ismael."
+          className="member"
+          src="/head.png"
+        />
+        <h4>
+          Ismael
+        </h4>
+      </div>
+      <div>
+        <img
+          alt="beautiful headshot of Nirvignesh."
+          className="member"
+          src="/head.png"
+        />
+        <h4>
+          Nirvignesh
+        </h4>
+      </div>
+      <div>
+        <img
+          alt="beautiful headshot of Tijana."
+          className="member"
+          src="/head.png"
+        />
+        <h4>
+          Tijana
+        </h4>
+      </div>
+      <div>
+        <img
+          alt="beautiful headshot of Jennifer."
+          className="member"
+          src="/head.png"
+        />
+        <h4>
+          Jennifer
+        </h4>
+      </div>
+      <div>
+        <img
+          alt="beautiful headshot of Kellan."
+          className="member"
+          src="/head.png"
+        />
+        <h4>
+          Kellan
+        </h4>
+      </div>
+    </div>
+  </div>
+</div>
+`;
