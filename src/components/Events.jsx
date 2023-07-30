@@ -23,13 +23,10 @@ function Events() {
       <h3>Upcoming Events</h3>
       <div id="events-placeholder-text">
         The &quot;Events&quot; section is under development.
-        <br />
-        <br />
+        <br /><br />
         In the meantime, please visit
         <br />
-        <a href="https://www.meetup.com/techlifecolumbus/events/">
-          https://www.meetup.com/techlifecolumbus/events/
-        </a>
+        <a href="https://www.meetup.com/techlifecolumbus/events/">https://www.meetup.com/techlifecolumbus/events/</a>
         <br />
         and look for FreeCodeCamp Columbus events there!
       </div>
