@@ -23,6 +23,7 @@ function Footer() {
         </ul>
       </nav>
       <p>Copyright Free Code Camp Columbus 2023 - {new Date().getFullYear()}</p>
+      <a href="https://www.netlify.com" target="_blank" rel="noreferrer" className="image-wrapper" data-testid="image-wrapper"> <img src="https://www.netlify.com/v3/img/components/netlify-color-accent.svg" alt="Deploys by Netlify" /> </a>
     </footer>
   );
 }
