@@ -352,7 +352,6 @@ exports[`App renders 1`] = `
     </p>
     <a
       className="image-wrapper"
-      data-testid="image-wrapper"
       href="https://www.netlify.com"
       rel="noreferrer"
       target="_blank"
