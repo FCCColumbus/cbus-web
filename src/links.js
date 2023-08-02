@@ -5,5 +5,5 @@ export default [
   { href: 'https://discord.com/invite/EXehPVnBYz', text: 'Discord' },
   { href: 'https://github.com/FCCColumbus', text: 'GitHub' },
   { href: '#events', text: 'Events' },
-  { href: 'https://github.com/FCCColumbus/cbus-web/graphs/contributors', text:'Contributors' },
+  { href: 'https://github.com/FCCColumbus/cbus-web/graphs/contributors', text: 'Contributors' },
 ];
