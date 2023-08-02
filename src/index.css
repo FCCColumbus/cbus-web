@@ -234,11 +234,11 @@ footer p {
 }
 
 footer .image-wrapper {
-display: inline-block;
-width: 90px;
-margin: 1rem auto 0;
-}
-
-footer img {
-  max-width: 100%;
-}
+  display: inline-block;
+  width: 90px;
+  margin: 1rem auto 0;
+  }
+  
+  footer img {
+    max-width: 100%;
+  }
