@@ -34,7 +34,7 @@ exports[`App renders 1`] = `
         </li>
         <li>
           <a
-            href="https://discord.gg/aF8skEe9nq"
+            href="https://discord.com/invite/EXehPVnBYz"
           >
             Discord
           </a>
@@ -318,7 +318,7 @@ exports[`App renders 1`] = `
         </li>
         <li>
           <a
-            href="https://discord.gg/aF8skEe9nq"
+            href="https://discord.com/invite/EXehPVnBYz"
           >
             Discord
           </a>

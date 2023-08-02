@@ -12,7 +12,7 @@ describe("App", () => {
   describe("renders links to external sites", () => {
     it.each([
       ['freeCodeCamp.org homepage', 'freecodecamp.org'],
-      ['Discord homepage', 'discord.gg'],
+      ['Discord homepage', 'discord.com/invite/EXehPVnBYz'],
       ['FCCColumbus Github profile', 'github.com/FCCColumbus'],
       ['FCCColumbus Github contributors', 'github.com/FCCColumbus/cbus-web/graphs/contributors'],
     ])(`%s`, (_, expected) => {
