@@ -52,5 +52,18 @@ exports[`Footer renders 1`] = `
     Copyright Free Code Camp Columbus 2023 - 
     2023
   </p>
+  <a
+    className="image-wrapper"
+    href="https://www.netlify.com"
+    rel="noreferrer"
+    target="_blank"
+  >
+     
+    <img
+      alt="Deploys by Netlify"
+      src="https://www.netlify.com/v3/img/components/netlify-color-accent.svg"
+    />
+     
+  </a>
 </footer>
 `;

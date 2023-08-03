@@ -213,6 +213,9 @@ th {
 }
 
 footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
   background-color: #97dad0;
   padding: 1em 1em 2em 1em;
 }
@@ -228,4 +231,14 @@ footer p {
 
 footer p {
   margin: 0;
+}
+
+footer .image-wrapper {
+  display: inline-block;
+  width: 90px;
+  margin: 1rem auto 0;
+}
+  
+footer img {
+  max-width: 100%;
 }
