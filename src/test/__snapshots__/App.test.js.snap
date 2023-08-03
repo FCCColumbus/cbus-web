@@ -197,33 +197,94 @@ exports[`App renders 1`] = `
       >
         <div>
           <img
-            alt="beautiful headshot of John."
+            alt="beautiful headshot of John Riley."
             className="admin"
-            src="/head.png"
+            src="https://avatars.githubusercontent.com/u/41979303?v=4"
           />
           <h4>
-            John
+            John Riley
           </h4>
+          <h5>
+            Admin & Coding Mentor
+          </h5>
         </div>
         <div>
           <img
-            alt="beautiful headshot of Amy."
+            alt="beautiful headshot of Kent Utterback."
             className="admin"
-            src="/head.png"
+            src="https://avatars.githubusercontent.com/u/17324971?v=4"
           />
           <h4>
-            Amy
+            Kent Utterback
           </h4>
+          <h5>
+            Admin Emeritus & Coding Mentor
+          </h5>
         </div>
         <div>
           <img
-            alt="beautiful headshot of Kevin."
+            alt="beautiful headshot of Amy Bedinghaus."
             className="admin"
-            src="/head.png"
+            src="https://avatars.githubusercontent.com/u/28076677?v=4"
           />
           <h4>
-            Kevin
+            Amy Bedinghaus
           </h4>
+          <h5>
+            Admin Emeritus
+          </h5>
+        </div>
+        <div>
+          <img
+            alt="beautiful headshot of Austin Truss."
+            className="admin"
+            src="https://media.licdn.com/dms/image/C5603AQGQpynBhWiZLA/profile-displayphoto-shrink_200_200/0/1517355585710?e=1696464000&v=beta&t=DrPEzm5U1we4G7qUPoFrAA5gw_MHSN3dU8_02iWZYRA"
+          />
+          <h4>
+            Austin Truss
+          </h4>
+          <h5>
+            Admin Emeritus
+          </h5>
+        </div>
+        <div>
+          <img
+            alt="beautiful headshot of Kevin Bruland."
+            className="admin"
+            src="https://avatars.githubusercontent.com/u/17850505?v=4"
+          />
+          <h4>
+            Kevin Bruland
+          </h4>
+          <h5>
+            Admin Emeritus
+          </h5>
+        </div>
+        <div>
+          <img
+            alt="beautiful headshot of Sarah Lilly-Bruland."
+            className="admin"
+            src="https://avatars.githubusercontent.com/u/17872422?v=4"
+          />
+          <h4>
+            Sarah Lilly-Bruland
+          </h4>
+          <h5>
+            Admin Emeritus
+          </h5>
+        </div>
+        <div>
+          <img
+            alt="beautiful headshot of Justin Woodward."
+            className="admin"
+            src="https://avatars.githubusercontent.com/u/17994108?v=4"
+          />
+          <h4>
+            Justin Woodward
+          </h4>
+          <h5>
+            Admin Emeritus
+          </h5>
         </div>
       </div>
     </div>
