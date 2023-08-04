@@ -196,92 +196,113 @@ exports[`App renders 1`] = `
         className="row"
       >
         <div>
+          <h4>
+            John
+            <br />
+             
+            Riley
+          </h4>
           <img
             alt="beautiful headshot of John Riley."
-            className="admin"
+            className="avatar admin-avatar"
             src="https://avatars.githubusercontent.com/u/41979303?v=4"
           />
-          <h4>
-            John Riley
-          </h4>
           <h5>
             Admin & Coding Mentor
           </h5>
         </div>
         <div>
+          <h4>
+            Kent
+            <br />
+             
+            Utterback
+          </h4>
           <img
             alt="beautiful headshot of Kent Utterback."
-            className="admin"
+            className="avatar admin-avatar"
             src="https://avatars.githubusercontent.com/u/17324971?v=4"
           />
-          <h4>
-            Kent Utterback
-          </h4>
           <h5>
             Admin Emeritus & Coding Mentor
           </h5>
         </div>
         <div>
+          <h4>
+            Amy
+            <br />
+             
+            Bedinghaus
+          </h4>
           <img
             alt="beautiful headshot of Amy Bedinghaus."
-            className="admin"
+            className="avatar admin-avatar"
             src="https://avatars.githubusercontent.com/u/28076677?v=4"
           />
-          <h4>
-            Amy Bedinghaus
-          </h4>
           <h5>
             Admin Emeritus
           </h5>
         </div>
         <div>
+          <h4>
+            Austin
+            <br />
+             
+            Truss
+          </h4>
           <img
             alt="beautiful headshot of Austin Truss."
-            className="admin"
+            className="avatar admin-avatar"
             src="https://media.licdn.com/dms/image/C5603AQGQpynBhWiZLA/profile-displayphoto-shrink_200_200/0/1517355585710?e=1696464000&v=beta&t=DrPEzm5U1we4G7qUPoFrAA5gw_MHSN3dU8_02iWZYRA"
           />
-          <h4>
-            Austin Truss
-          </h4>
           <h5>
             Admin Emeritus
           </h5>
         </div>
         <div>
+          <h4>
+            Kevin
+            <br />
+             
+            Bruland
+          </h4>
           <img
             alt="beautiful headshot of Kevin Bruland."
-            className="admin"
+            className="avatar admin-avatar"
             src="https://avatars.githubusercontent.com/u/17850505?v=4"
           />
-          <h4>
-            Kevin Bruland
-          </h4>
           <h5>
             Admin Emeritus
           </h5>
         </div>
         <div>
+          <h4>
+            Sarah
+            <br />
+             
+            Lilly-Bruland
+          </h4>
           <img
             alt="beautiful headshot of Sarah Lilly-Bruland."
-            className="admin"
+            className="avatar admin-avatar"
             src="https://avatars.githubusercontent.com/u/17872422?v=4"
           />
-          <h4>
-            Sarah Lilly-Bruland
-          </h4>
           <h5>
             Admin Emeritus
           </h5>
         </div>
         <div>
+          <h4>
+            Justin
+            <br />
+             
+            Woodward
+          </h4>
           <img
             alt="beautiful headshot of Justin Woodward."
-            className="admin"
+            className="avatar admin-avatar"
             src="https://avatars.githubusercontent.com/u/17994108?v=4"
           />
-          <h4>
-            Justin Woodward
-          </h4>
           <h5>
             Admin Emeritus
           </h5>
@@ -300,7 +321,7 @@ exports[`App renders 1`] = `
         <div>
           <img
             alt="beautiful headshot of John."
-            className="member"
+            className="avatar member-avatar"
             src="/head.png"
           />
           <h4>
@@ -310,7 +331,7 @@ exports[`App renders 1`] = `
         <div>
           <img
             alt="beautiful headshot of Ismael."
-            className="member"
+            className="avatar member-avatar"
             src="/head.png"
           />
           <h4>
@@ -320,7 +341,7 @@ exports[`App renders 1`] = `
         <div>
           <img
             alt="beautiful headshot of Nirvignesh."
-            className="member"
+            className="avatar member-avatar"
             src="/head.png"
           />
           <h4>
@@ -330,7 +351,7 @@ exports[`App renders 1`] = `
         <div>
           <img
             alt="beautiful headshot of Tijana."
-            className="member"
+            className="avatar member-avatar"
             src="/head.png"
           />
           <h4>
@@ -340,7 +361,7 @@ exports[`App renders 1`] = `
         <div>
           <img
             alt="beautiful headshot of Jennifer."
-            className="member"
+            className="avatar member-avatar"
             src="/head.png"
           />
           <h4>
@@ -350,7 +371,7 @@ exports[`App renders 1`] = `
         <div>
           <img
             alt="beautiful headshot of Kellan."
-            className="member"
+            className="avatar member-avatar"
             src="/head.png"
           />
           <h4>
