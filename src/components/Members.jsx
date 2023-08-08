@@ -9,12 +9,12 @@ function Members() {
     { id: 6, firstName: 'Justin', lastName: 'Woodward', title: 'Admin Emeritus', imgUrl: 'https://avatars.githubusercontent.com/u/17994108?v=4' },
   ]
   const members = [
-    { name: 'John', imgUrl: '/head.png' },
-    { name: 'Ismael', imgUrl: '/head.png' },
-    { name: 'Nirvignesh', imgUrl: '/head.png' },
-    { name: 'Tijana', imgUrl: '/head.png' },
-    { name: 'Jennifer', imgUrl: '/head.png' },
-    { name: 'Kellan', imgUrl: '/head.png' },
+    { id: 0, name: 'John', imgUrl: '/head.png' },
+    { id: 1, name: 'Ismael', imgUrl: '/head.png' },
+    { id: 2, name: 'Nirvignesh', imgUrl: '/head.png' },
+    { id: 3, name: 'Tijana', imgUrl: '/head.png' },
+    { id: 4, name: 'Jennifer', imgUrl: '/head.png' },
+    { id: 5, name: 'Kellan', imgUrl: '/head.png' },
   ]
   return (
     <div>
@@ -34,7 +34,7 @@ function Members() {
         <h3>Meet the Contributors</h3>
         <div className="row">
           {members.map((member) =>
-            <div key={member.name}>
+            <div key={member.id}>
               <img className='avatar member-avatar' src={member.imgUrl} alt={`beautiful headshot of ${member.name}.`} />
               <h4>{member.name}</h4>
             </div>
