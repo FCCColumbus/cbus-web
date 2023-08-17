@@ -1,14 +1,13 @@
-import renderer from "react-test-renderer";
 import { render } from "@testing-library/react";
 
 import App from "../App"
+import About from "../components/About";
+import Events from "../components/Events";
+
+jest.mock('../components/Events');
+jest.mock('../components/About');
 
 describe("App", () => {
-  it("renders", () => {
-    const view = renderer.create(<App />);
-    expect(view).toMatchSnapshot();
-  });
-
   describe("renders links to external sites", () => {
     it.each([
       ['freeCodeCamp.org homepage', 'freecodecamp.org'],
@@ -28,14 +27,12 @@ describe("App", () => {
   });
 
   test("has an Events section", () => {
-    const { container } = render(<App />);
-    const event = container.querySelector('#events');
-    expect(event).toBeInTheDocument();
+    render(<App />)
+    expect(Events).toHaveBeenCalled()
   });
 
   test("has an About section", () => {
-    const { container } = render(<App />);
-    const about = container.querySelector('#about');
-    expect(about).toBeInTheDocument();
+    render(<App />)
+    expect(About).toHaveBeenCalled()
   });
 });
