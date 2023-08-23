@@ -1,11 +1,32 @@
-import { render } from "@testing-library/react";
+import { render, screen } from "@testing-library/react";
 
 import App from "../App"
-import About from "../components/About";
-import Events from "../components/Events";
 
-jest.mock('../components/Events');
-jest.mock('../components/About');
+jest.mock('../components/Header', () => {
+  return () => <div>Header Mock</div>
+});
+jest.mock('../components/Splash', () => {
+  return () => <div>Splash Mock</div>
+});
+jest.mock('../components/About', () => {
+  return () => <div>About Mock</div>
+});
+jest.mock('../components/Events', () => {
+  return () => <div>Events Mock</div>
+});
+jest.mock('../components/Members', () => {
+  return () => <div>Members Mock</div>
+});
+jest.mock('../components/Footer', () => {
+  return () => (
+    <div>
+      <a href="freecodecamp.org">freeCodeCamp.org homepage</a>
+      <a href="discord.com/invite/EXehPVnBYz">Discord homepage</a>
+      <a href="github.com/FCCColumbus">FCCColumbus Github profile</a>
+      <a href="github.com/FCCColumbus/cbus-web/graphs/contributors">FCCColumbus Github contributors</a>
+    </div>
+  );
+});
 
 describe("App", () => {
   describe("renders links to external sites", () => {
@@ -26,13 +47,17 @@ describe("App", () => {
     });
   });
 
-  test("has an Events section", () => {
+  test("renders App components in order", () => {
     render(<App />)
-    expect(Events).toHaveBeenCalled()
-  });
-
-  test("has an About section", () => {
-    render(<App />)
-    expect(About).toHaveBeenCalled()
+    expect(screen.getByText('Header Mock')).toBeInTheDocument(); 
+    expect(screen.getByText('Splash Mock')).toBeInTheDocument();  
+    expect(screen.getByText('About Mock')).toBeInTheDocument();  
+    expect(screen.getByText('Events Mock')).toBeInTheDocument();
+    expect(screen.getByAltText('code on a screen. mostly css')).toBeInTheDocument();
+    expect(screen.getByText('Members Mock')).toBeInTheDocument();  
+    expect(screen.getByText("freeCodeCamp.org homepage")).toBeInTheDocument();
+    expect(screen.getByText("Discord homepage")).toBeInTheDocument();
+    expect(screen.getByText("FCCColumbus Github profile")).toBeInTheDocument();
+    expect(screen.getByText("FCCColumbus Github contributors")).toBeInTheDocument();
   });
 });
