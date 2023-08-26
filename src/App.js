@@ -4,7 +4,7 @@ import Splash from './components/Splash';
 import About from './components/About';
 import Events from './components/Events'
 import Members from './components/Members';
-import Footer from './components/Footer'
+import Footer from './components/Footer';
 
 function App() {
   return (
