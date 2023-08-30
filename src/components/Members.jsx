@@ -9,12 +9,15 @@ function Members() {
     { id: 6, firstName: 'Justin', lastName: 'Woodward', title: 'Admin Emeritus', imgUrl: 'https://avatars.githubusercontent.com/u/17994108?v=4' },
   ]
   const members = [
-    { id: 0, name: 'John', imgUrl: '/head.png' },
-    { id: 1, name: 'Ismael', imgUrl: '/head.png' },
-    { id: 2, name: 'Nirvignesh', imgUrl: '/head.png' },
-    { id: 3, name: 'Tijana', imgUrl: '/head.png' },
-    { id: 4, name: 'Jennifer', imgUrl: '/head.png' },
-    { id: 5, name: 'Kellan', imgUrl: '/head.png' },
+    { id: 0, name: 'Jed', imgUrl: 'https://avatars.githubusercontent.com/u/22714448?v=4' },
+    { id: 1, name: 'John', imgUrl: 'https://avatars.githubusercontent.com/u/41979303?v=4' },
+    { id: 2, name: 'Amy', imgUrl: 'https://avatars.githubusercontent.com/u/28076677?v=4' },
+    { id: 3, name: 'Ismael', imgUrl: 'https://avatars.githubusercontent.com/u/90379217?v=4' },
+    { id: 4, name: 'Nash', imgUrl: 'https://avatars.githubusercontent.com/u/90426925?v=4' },
+    { id: 5, name: 'Tijana', imgUrl: 'https://avatars.githubusercontent.com/u/16984496?v=4' },
+    { id: 6, name: 'Jennifer', imgUrl: 'https://avatars.githubusercontent.com/u/97619638?v=4' },
+    { id: 7, name: 'Kellan', imgUrl: 'https://avatars.githubusercontent.com/u/20804931?v=4' },
+    { id: 8, name: 'FCCCAdmin', imgUrl: 'https://avatars.githubusercontent.com/u/87655129?v=4' },
   ]
   return (
     <div>
@@ -32,14 +35,16 @@ function Members() {
       </div>
       <div className="members"> 
         <h3>Meet the Contributors</h3>
-        <div className="row">
+        <a className="contributors-link" href="https://github.com/FCCColumbus/cbus-web/graphs/contributors">
+        <div className="row">          
           {members.map((member) =>
             <div key={member.id}>
               <img className='avatar member-avatar' src={member.imgUrl} alt={`beautiful headshot of ${member.name}.`} />
-              <h4>{member.name}</h4>
+              <h5>{member.name}</h5>
             </div>
           )}
         </div>
+        </a>
       </div>
     </div>
   );

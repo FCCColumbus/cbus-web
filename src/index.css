@@ -208,8 +208,8 @@ th {
 }
 
 .member-avatar {
-  height: 100px;
-  width: 100px;
+  height: 125px;
+  width: 125px;
   border-radius: 50%;
 }
 
@@ -250,4 +250,9 @@ footer .image-wrapper {
   
 footer img {
   max-width: 100%;
+}
+
+.contributors-link {
+  text-decoration: none;
+  color: #707070;
 }
