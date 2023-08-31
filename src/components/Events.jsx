@@ -30,8 +30,8 @@ function Events() {
         <br />
         and look for FreeCodeCamp Columbus events there!
       </div>
-       {/* The array mapping below is retained for future reference.  */}
-      {/* {events.map((event, i) => <Event event={event} key={event.id} id={i} />)}  */}
+      {/* The array mapping below is retained for future reference.  */}
+      {/* {events.map((event, i) => <Event event={event} key={event.id} id={i} />)} */}
     </div>
   );
 }
