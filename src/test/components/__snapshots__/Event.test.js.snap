@@ -7,7 +7,7 @@ exports[`Event renders 1`] = `
   <img
     alt="people coding"
     className="event-img"
-    src="/coding-NaN.jpg"
+    src="/coding-2.jpg"
   />
   <div
     className="info"
