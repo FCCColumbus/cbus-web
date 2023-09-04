@@ -1,6 +1,7 @@
+import PropTypes from "prop-types";
+
 function Event({ event, id }) {
   const href = `/coding-${id + 1}.jpg`
-
   const formattedDateTime = new Intl.DateTimeFormat('en-US', { dateStyle: 'medium', timeStyle: 'short' }).format(event.time);
   /*
     We replace the "narrow non-breaking space" that appears before the AM/PM in some environments
@@ -9,7 +10,7 @@ function Event({ event, id }) {
       - jedduffey@gmail.com, 2023 May 22
   */
   const replacedNonBreakingSpace = formattedDateTime.replace(/\u202f/g, ' ');
-
+  
   return (
     <div className="event">
       <img src={href} alt='people coding' className="event-img" />
@@ -32,5 +33,16 @@ function Event({ event, id }) {
     </div>
   )
 }
+
+Event.propTypes = {
+  event: PropTypes.shape({
+    name: PropTypes.string.isRequired,
+    description: PropTypes.string.isRequired,
+    time: PropTypes.objectOf(Date),
+    location : PropTypes.string.isRequired,
+    id : PropTypes.string.isRequired,
+  }).isRequired,
+  id: PropTypes.number.isRequired,
+};
 
 export default Event
