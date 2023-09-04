@@ -14,7 +14,7 @@ function Members() {
     { id: 2, name: 'Amy' },
     { id: 3, name: 'Mike' },
     { id: 4, name: 'Ismael' },
-    { id: 5, name: 'Nash', },
+    { id: 5, name: 'Nash' },
     { id: 6, name: 'Tijana' },
     { id: 7, name: 'Jennifer' },
     { id: 8, name: 'Kellan' },

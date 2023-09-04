@@ -183,7 +183,8 @@ th {
   width: 33%;
 }
 
-.members {
+.members,
+.contributors {
   display: flex;
   flex-flow: column nowrap;
   align-items: center;
@@ -217,12 +218,6 @@ th {
 
 .members h5 {
   margin-top: 15px;
-}
-
-.contributors {
-  display: flex;
-  flex-flow: column nowrap;
-  align-items: center;
 }
 
 .contributors-name-container {

@@ -126,74 +126,56 @@ exports[`Members renders 1`] = `
     </div>
   </div>
   <div
-    className="members"
+    className="contributors"
   >
     <h3>
       Meet the Contributors
     </h3>
-    <div
-      className="row"
+    <a
+      className="contributors-link"
+      href="https://github.com/FCCColumbus/cbus-web/graphs/contributors"
+      rel="noreferrer"
+      target="_blank"
     >
-      <div>
-        <img
-          alt="beautiful headshot of John."
-          className="avatar member-avatar"
-          src="/head.png"
-        />
-        <h4>
-          John
-        </h4>
-      </div>
-      <div>
-        <img
-          alt="beautiful headshot of Ismael."
-          className="avatar member-avatar"
-          src="/head.png"
-        />
-        <h4>
-          Ismael
-        </h4>
-      </div>
-      <div>
-        <img
-          alt="beautiful headshot of Nirvignesh."
-          className="avatar member-avatar"
-          src="/head.png"
-        />
-        <h4>
-          Nirvignesh
-        </h4>
-      </div>
-      <div>
-        <img
-          alt="beautiful headshot of Tijana."
-          className="avatar member-avatar"
-          src="/head.png"
-        />
-        <h4>
-          Tijana
-        </h4>
-      </div>
-      <div>
-        <img
-          alt="beautiful headshot of Jennifer."
-          className="avatar member-avatar"
-          src="/head.png"
-        />
-        <h4>
-          Jennifer
-        </h4>
-      </div>
-      <div>
-        <img
-          alt="beautiful headshot of Kellan."
-          className="avatar member-avatar"
-          src="/head.png"
-        />
-        <h4>
-          Kellan
-        </h4>
-      </div>
+      <img
+        alt="beautiful headshots of our members"
+        className="members-avatar"
+        src="https://contrib.rocks/image?repo=FCCColumbus/cbus-web"
+      />
+    </a>
+    <div
+      className="row contributors-name-container"
+    >
+      <h4>
+        Jed
+      </h4>
+      <h4>
+        John
+      </h4>
+      <h4>
+        Amy
+      </h4>
+      <h4>
+        Mike
+      </h4>
+      <h4>
+        Ismael
+      </h4>
+      <h4>
+        Nash
+      </h4>
+      <h4>
+        Tijana
+      </h4>
+      <h4>
+        Jennifer
+      </h4>
+      <h4>
+        Kellan
+      </h4>
+      <h4>
+        FCCCAdmin
+      </h4>
     </div>
   </div>
 </div>
