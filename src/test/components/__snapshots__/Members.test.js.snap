@@ -143,40 +143,6 @@ exports[`Members renders 1`] = `
         src="https://contrib.rocks/image?repo=FCCColumbus/cbus-web"
       />
     </a>
-    <div
-      className="row contributors-name-container"
-    >
-      <h4>
-        Jed
-      </h4>
-      <h4>
-        John
-      </h4>
-      <h4>
-        Amy
-      </h4>
-      <h4>
-        Mike
-      </h4>
-      <h4>
-        Ismael
-      </h4>
-      <h4>
-        Nash
-      </h4>
-      <h4>
-        Tijana
-      </h4>
-      <h4>
-        Jennifer
-      </h4>
-      <h4>
-        Kellan
-      </h4>
-      <h4>
-        FCCCAdmin
-      </h4>
-    </div>
   </div>
 </div>
 `;

@@ -190,6 +190,10 @@ th {
   align-items: center;
 }
 
+.contributors {
+  margin-bottom: 25px;
+}
+
 .row {
   display: flex;
   flex-direction: row;
@@ -218,15 +222,6 @@ th {
 
 .members h5 {
   margin-top: 15px;
-}
-
-.contributors-name-container {
-  max-width: 1000px;
-}
-
-.contributors-name-container h4 {
-  margin-top: 15px;
-  width: 140px;
 }
 
 footer {
