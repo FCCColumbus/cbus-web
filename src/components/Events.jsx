@@ -1,6 +1,18 @@
 // import Event from './Event'
+import { useState } from 'react';
+import Calendar from 'react-calendar';
+import 'react-calendar/dist/Calendar.css';
 
 function Events() {
+
+  // setting the cal's default state to today's date
+  const [date, setDate] = useState(new Date())
+
+  const changeDate = newDate => {
+    console.log(newDate);
+    setDate(newDate)
+  }
+
   // The arrays below are retained for future reference,
   // pending implementation of some API call to retrieve events from Google Calendar or Meetup.com, for example.
 
@@ -32,6 +44,7 @@ function Events() {
       </div>
       {/* The array mapping below is retained for future reference.  */}
       {/* {events.map((event, i) => <Event event={event} key={event.id} id={i} />)} */}
+      <Calendar onChange={changeDate} value={date} />
     </div>
   );
 }
