@@ -11,7 +11,7 @@ function Members() {
 
   return (
     <div>
-      <div className="members">
+      <div className="admins">
         <h3>Meet the Admins</h3>
         <div className="row">
           {admin.map((member) =>
@@ -26,7 +26,7 @@ function Members() {
       <div className="contributors"> 
         <h3>Meet the Contributors</h3>
           <a className="contributors-link" href="https://github.com/FCCColumbus/cbus-web/graphs/contributors" rel="noreferrer" target="_blank">
-            <img className='members-avatar' src='https://contrib.rocks/image?repo=FCCColumbus/cbus-web' alt='beautiful headshots of our members' />         
+            <img className='contributors-avatar' src='https://contrib.rocks/image?repo=FCCColumbus/cbus-web' alt='beautiful headshots of our members' />         
           </a>
       </div>
     </div>

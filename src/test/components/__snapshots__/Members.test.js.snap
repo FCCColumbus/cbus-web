@@ -3,7 +3,7 @@
 exports[`Members renders 1`] = `
 <div>
   <div
-    className="members"
+    className="admins"
   >
     <h3>
       Meet the Admins
@@ -139,7 +139,7 @@ exports[`Members renders 1`] = `
     >
       <img
         alt="beautiful headshots of our members"
-        className="members-avatar"
+        className="contributors-avatar"
         src="https://contrib.rocks/image?repo=FCCColumbus/cbus-web"
       />
     </a>

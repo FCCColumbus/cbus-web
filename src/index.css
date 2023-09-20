@@ -183,7 +183,7 @@ th {
   width: 33%;
 }
 
-.members,
+.admins,
 .contributors {
   display: flex;
   flex-flow: column nowrap;
@@ -212,15 +212,15 @@ th {
   width: 140px;
 }
 
-.members-avatar {
+.members-avatar, .contributors-avatar {
   width: 1000px;
 }
 
-.members h4 {
+.admins h4 {
   margin: 5px 0 5px 0;
 }
 
-.members h5 {
+.admins h5 {
   margin-top: 15px;
 }
 
