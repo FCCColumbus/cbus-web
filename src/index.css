@@ -253,6 +253,17 @@ footer img {
 }
 
 .custom-tile {
-  background-color: blue;
-  color: orange;
+  background-color: red !important;
+  color: white;
+}
+
+.custom-tile:hover {
+  background-color: #ff5d5ddc !important;
+}
+
+/* disabling weekend tiles from being red */
+.react-calendar__month-view__days__day--weekend:not(
+    .react-calendar__month-view__days__day--neighboringMonth
+  ) {
+  color: black;
 }
