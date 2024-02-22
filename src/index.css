@@ -8,12 +8,12 @@ body {
 
 header {
   background-color: #97dad0;
-  color: #fff
+  color: #fff;
 }
 
 nav {
   background-color: #f5fafa;
-  padding: .5em 1em;
+  padding: 0.5em 1em;
 }
 
 ul {
@@ -45,8 +45,8 @@ header h1 {
   font-size: 4em;
   display: flex;
   margin: 0;
-  padding-top: .25em;
-  padding-bottom: .25em;
+  padding-top: 0.25em;
+  padding-bottom: 0.25em;
   width: 100%;
   text-align: center;
   display: block;
@@ -54,7 +54,7 @@ header h1 {
 
 .big-logo {
   height: 50px;
-  margin-left: .75em;
+  margin-left: 0.75em;
 }
 
 h2 {
@@ -63,9 +63,8 @@ h2 {
   font-size: 2.5em;
   display: block;
   width: 100%;
-  padding: .5em;
+  padding: 0.5em;
 }
-
 
 .splash {
   display: grid;
@@ -118,7 +117,12 @@ h3 {
 }
 
 .come li {
-  margin: .5em;
+  margin: 0.5em;
+}
+
+#divider {
+  max-width: 100%;
+  overflow: hidden;
 }
 
 .events {
@@ -145,10 +149,12 @@ h3 {
     padding: 1em;
 } */
 
+
+
 .event-img {
   height: 300px;
   width: auto;
-  margin-right: 4em
+  margin-right: 4em;
 }
 
 .info {
@@ -165,18 +171,18 @@ h3 {
 .event h5 {
   font-size: 2.5em;
   font-weight: 400;
-  margin: .5em;
+  margin: 0.5em;
 }
 
 table {
-  row-gap: .5em;
+  row-gap: 0.5em;
   width: 100%;
 }
 
 th,
 td {
   text-align: left;
-  padding-right: .5em;
+  padding-right: 0.5em;
 }
 
 th {
@@ -247,7 +253,7 @@ footer .image-wrapper {
   width: 90px;
   margin: 1rem auto 0;
 }
-  
+
 footer img {
   max-width: 100%;
 }
