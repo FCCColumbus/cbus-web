@@ -8,21 +8,10 @@ function Members() {
     { id: 5, firstName: 'Sarah', lastName: 'Lilly-Bruland', title: 'Admin Emeritus', imgUrl: 'https://avatars.githubusercontent.com/u/17872422?v=4' },
     { id: 6, firstName: 'Justin', lastName: 'Woodward', title: 'Admin Emeritus', imgUrl: 'https://avatars.githubusercontent.com/u/17994108?v=4' },
   ]
-  const members = [
-    { id: 0, name: 'Jed' },
-    { id: 1, name: 'John' },
-    { id: 2, name: 'Amy' },
-    { id: 3, name: 'Mike' },
-    { id: 4, name: 'Ismael' },
-    { id: 5, name: 'Nash' },
-    { id: 6, name: 'Tijana' },
-    { id: 7, name: 'Jennifer' },
-    { id: 8, name: 'Kellan' },
-    { id: 9, name: 'FCCCAdmin' },
-  ]
+
   return (
     <div>
-      <div className="members">
+      <div className="admins">
         <h3>Meet the Admins</h3>
         <div className="row">
           {admin.map((member) =>
@@ -37,13 +26,8 @@ function Members() {
       <div className="contributors"> 
         <h3>Meet the Contributors</h3>
           <a className="contributors-link" href="https://github.com/FCCColumbus/cbus-web/graphs/contributors" rel="noreferrer" target="_blank">
-            <img className='members-avatar' src='https://contrib.rocks/image?repo=FCCColumbus/cbus-web' alt='beautiful headshots of our members' />         
+            <img className='contributors-avatar' src='https://contrib.rocks/image?repo=FCCColumbus/cbus-web' alt='beautiful headshots of our members' />         
           </a>
-        <div className="row contributors-name-container"> 
-              {members.map((member) =>
-                  <h4 key={member.id}>{member.name}</h4>
-              )}
-        </div>
       </div>
     </div>
   );

@@ -69,25 +69,29 @@ h2 {
 
 .splash {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsive grid */
+  grid-gap: 20px; /* Space between grid items */
   max-width: 1600px;
+  margin: auto; /* Centering the grid */
 }
 
 .byline {
-  grid-row: 1;
-  grid-column-start: 1;
   padding: 2.5em;
   margin: 2.5em;
   border: 2px solid #97dad0;
   border-radius: 1em;
   text-align: left;
+  grid-column: 1 / -1; /* Ensure full width on smaller screens */
 }
 
+
 .splash img {
-  max-width: 80%;
+  width: 100%; /* Adjusted for better responsiveness */
+  max-width: 100%; /* Ensures image does not exceed its container */
+  height: auto;
   margin: 2.5em;
   border-radius: 1em;
+  grid-column: 1 / -1; /* Ensure full width on smaller screens */
 }
 
 h3 {
@@ -183,11 +187,15 @@ th {
   width: 33%;
 }
 
-.members,
+.admins,
 .contributors {
   display: flex;
   flex-flow: column nowrap;
   align-items: center;
+}
+
+.contributors {
+  margin-bottom: 25px;
 }
 
 .row {
@@ -208,25 +216,16 @@ th {
   width: 140px;
 }
 
-.members-avatar {
+.members-avatar, .contributors-avatar {
   width: 1000px;
 }
 
-.members h4 {
+.admins h4 {
   margin: 5px 0 5px 0;
 }
 
-.members h5 {
+.admins h5 {
   margin-top: 15px;
-}
-
-.contributors-name-container {
-  max-width: 1000px;
-}
-
-.contributors-name-container h4 {
-  margin-top: 15px;
-  width: 140px;
 }
 
 footer {
@@ -263,4 +262,15 @@ footer img {
 .contributors-link {
   text-decoration: none;
   color: #707070;
+}
+
+/* Responsive adjustments */
+@media (min-width: 768px) {
+  .splash {
+    grid-template-columns: 1fr 1fr; /* 2 columns for wider screens */
+  }
+
+  .byline, .splash img {
+    grid-column: auto; /* Resets to default grid behavior */
+  }
 }
