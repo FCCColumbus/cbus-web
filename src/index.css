@@ -187,7 +187,8 @@ th {
   width: 33%;
 }
 
-.members {
+.members,
+.contributors {
   display: flex;
   flex-flow: column nowrap;
   align-items: center;
@@ -211,10 +212,8 @@ th {
   width: 140px;
 }
 
-.member-avatar {
-  height: 100px;
-  width: 100px;
-  border-radius: 50%;
+.members-avatar {
+  width: 1000px;
 }
 
 .members h4 {
@@ -223,6 +222,15 @@ th {
 
 .members h5 {
   margin-top: 15px;
+}
+
+.contributors-name-container {
+  max-width: 1000px;
+}
+
+.contributors-name-container h4 {
+  margin-top: 15px;
+  width: 140px;
 }
 
 footer {
@@ -265,4 +273,8 @@ footer img {
   .byline, .splash img {
     grid-column: auto; /* Resets to default grid behavior */
   }
+  
+.contributors-link {
+  text-decoration: none;
+  color: #707070;
 }
