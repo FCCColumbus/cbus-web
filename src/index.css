@@ -187,10 +187,15 @@ th {
   width: 33%;
 }
 
-.members {
+.admins,
+.contributors {
   display: flex;
   flex-flow: column nowrap;
   align-items: center;
+}
+
+.contributors {
+  margin-bottom: 25px;
 }
 
 .row {
@@ -211,17 +216,15 @@ th {
   width: 140px;
 }
 
-.member-avatar {
-  height: 100px;
-  width: 100px;
-  border-radius: 50%;
+.members-avatar, .contributors-avatar {
+  width: 1000px;
 }
 
-.members h4 {
+.admins h4 {
   margin: 5px 0 5px 0;
 }
 
-.members h5 {
+.admins h5 {
   margin-top: 15px;
 }
 
@@ -256,13 +259,7 @@ footer img {
   max-width: 100%;
 }
 
-/* Responsive adjustments */
-@media (min-width: 768px) {
-  .splash {
-    grid-template-columns: 1fr 1fr; /* 2 columns for wider screens */
-  }
-
-  .byline, .splash img {
-    grid-column: auto; /* Resets to default grid behavior */
-  }
+.contributors-link {
+  text-decoration: none;
+  color: #707070;
 }
