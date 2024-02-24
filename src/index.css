@@ -263,3 +263,14 @@ footer img {
   text-decoration: none;
   color: #707070;
 }
+
+/* Responsive adjustments */
+@media (min-width: 768px) {
+  .splash {
+    grid-template-columns: 1fr 1fr; /* 2 columns for wider screens */
+  }
+
+  .byline, .splash img {
+    grid-column: auto; /* Resets to default grid behavior */
+  }
+}
