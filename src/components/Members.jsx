@@ -8,17 +8,10 @@ function Members() {
     { id: 5, firstName: 'Sarah', lastName: 'Lilly-Bruland', title: 'Admin Emeritus', imgUrl: 'https://avatars.githubusercontent.com/u/17872422?v=4' },
     { id: 6, firstName: 'Justin', lastName: 'Woodward', title: 'Admin Emeritus', imgUrl: 'https://avatars.githubusercontent.com/u/17994108?v=4' },
   ]
-  const members = [
-    { id: 0, name: 'John', imgUrl: '/head.png' },
-    { id: 1, name: 'Ismael', imgUrl: '/head.png' },
-    { id: 2, name: 'Nirvignesh', imgUrl: '/head.png' },
-    { id: 3, name: 'Tijana', imgUrl: '/head.png' },
-    { id: 4, name: 'Jennifer', imgUrl: '/head.png' },
-    { id: 5, name: 'Kellan', imgUrl: '/head.png' },
-  ]
+
   return (
     <div>
-      <div className="members">
+      <div className="admins">
         <h3>Meet the Admins</h3>
         <div className="row">
           {admin.map((member) =>
@@ -30,16 +23,11 @@ function Members() {
           )}
         </div>
       </div>
-      <div className="members"> 
+      <div className="contributors"> 
         <h3>Meet the Contributors</h3>
-        <div className="row">
-          {members.map((member) =>
-            <div key={member.id}>
-              <img className='avatar member-avatar' src={member.imgUrl} alt={`beautiful headshot of ${member.name}.`} />
-              <h4>{member.name}</h4>
-            </div>
-          )}
-        </div>
+          <a className="contributors-link" href="https://github.com/FCCColumbus/cbus-web/graphs/contributors" rel="noreferrer" target="_blank">
+            <img className='contributors-avatar' src='https://contrib.rocks/image?repo=FCCColumbus/cbus-web' alt='beautiful headshots of our members' />         
+          </a>
       </div>
     </div>
   );
