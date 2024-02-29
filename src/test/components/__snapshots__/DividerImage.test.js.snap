@@ -1,0 +1,8 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`DividerImage renders 1`] = `
+<img
+  alt="code on a screen. mostly css"
+  src="/divider.jpg"
+/>
+`;

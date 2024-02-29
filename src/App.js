@@ -1,10 +1,11 @@
 import './App.css';
-import Header from './components/Header';
-import Splash from './components/Splash';
 import About from './components/About';
+import DividerImage from './components/DividerImage';
 import Events from './components/Events'
-import Members from './components/Members';
 import Footer from './components/Footer';
+import Header from './components/Header';
+import Members from './components/Members';
+import Splash from './components/Splash';
 
 function App() {
   return (
@@ -13,7 +14,7 @@ function App() {
       <Splash />
       <About />
       <Events />
-      <img src='/divider.jpg' alt='code on a screen. mostly css' />
+      <DividerImage />
       <Members />
       <Footer />
     </div>
