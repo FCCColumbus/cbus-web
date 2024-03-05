@@ -124,7 +124,7 @@ h3 {
   margin: 0.5em;
 }
 
-#divider {
+.divider {
   max-width: 100%;
   overflow: hidden;
 }
