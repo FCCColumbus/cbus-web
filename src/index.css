@@ -267,3 +267,7 @@ footer img {
   ) {
   color: black;
 }
+
+.react-calendar__tile--active {
+  background-color: blue !important;
+}

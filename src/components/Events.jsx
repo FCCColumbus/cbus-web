@@ -1,34 +1,76 @@
-// import Event from './Event'
-import { useState } from 'react';
 import Calendar from 'react-calendar';
+import { useState, useEffect } from 'react';
+import ical from 'cal-parser'
+
+import Event from './Event';
+
+
 import 'react-calendar/dist/Calendar.css';
 
 function Events() {
+  const [selectedDate, setSelectedDate] = useState(new Date());
+  const [displayedEvent, setDisplayedEvent] = useState(null);
+  const [events, setEvents] = useState([]);
 
-  // setting the cal's default state to today's date
-  const [selectedDate, setSelectedDate] = useState(new Date())
+  const fetchData = async () => {
+    try {
+      const response = await fetch('https://docs.google.com/document/d/1OcnWWt1qHaJWE-8v_FPtNO8DKviRQ7DMaqylupuvPXE/export?format=txt')
+      
+      const content = await response.text()
+      return content
+    } catch (error) {
+      console.log(error);
+      return null
+    }
+  } 
+  
+  useEffect(() => {
+    
+    const getEventData = async () => {
+      try {
+        const fetchedData = await fetchData() 
+        const parsedData = ical.parseString(fetchedData)
+        const setData = parsedData.events
+        
+        // check for nearest future event
+        const nearestFutureEvent = setData.find(event => event.dtstart.value.toDateString() >= new Date().toDateString());
+        
+        // Check if there's an event on today's date
+        const todayEvent = setData.find(event => event.dtstart.value.toDateString() === new Date().toDateString());
+
+        if (todayEvent) {
+          setSelectedDate(todayEvent.dtstart.value);
+          setDisplayedEvent(todayEvent);
+        } else if (nearestFutureEvent) {
+          setSelectedDate(nearestFutureEvent.dtstart.value);
+          setDisplayedEvent(nearestFutureEvent);
+        } else {
+          const nearestPastEvent = setData[setData.length - 1];
+          setSelectedDate(nearestPastEvent.dtstart.value);
+          setDisplayedEvent(nearestPastEvent);
+        }
+
+        setEvents(setData);
+        } catch (error) {
+          console.log(error);
+        }
+    }
+
+     getEventData();
+  
+  }, []);
 
   const changeDate = newDate => {
-    setSelectedDate(newDate)
-  }
+    setSelectedDate(newDate);
 
-  // The arrays below are retained for future reference,
-  // pending implementation of some API call to retrieve events from Google Calendar or Meetup.com, for example.
-  const events = [{
-      name: "regular meetup",
-      description: "have pizza and talk about code",
-      date: new Date(2023, 9, 5),
-      location: 'Co-Hatch Upper Arlington',
-      link: 'google.com',
-      id: 'event-01'
-  }, {
-      name: "What are web components?",
-      description: "John will give a lecture about what web components are and why we should care. Don't worry, there'll be pizza!",
-      date: new Date(2023, 9, 13),
-      location: 'Co-Hatch Upper Arlington',
-      link: 'google.com',
-      id: 'event-02'
-  }]
+    // Check if the new date matches an event's date before updating
+    const matchingEvent = events.find(event => event.dtstart.value.toDateString() === newDate.toDateString());
+    console.log(matchingEvent);
+
+    if (matchingEvent) {
+      setDisplayedEvent(matchingEvent);
+    }
+  };
 
   return (
     <div id="events" className="events">
@@ -42,21 +84,26 @@ function Events() {
         <br />
         and look for FreeCodeCamp Columbus events there!
       </div>
-      {/* The array mapping below is retained for future reference.  */}
-      {/* {events.map((event, i) => <Event event={event} key={event.id} id={i} />)} */}
+      {displayedEvent && <Event event={displayedEvent}  />}
+      {/* key={displayedEvent.id} id={displayedEvent.id} */}
       <Calendar
         onChange={changeDate}
         value={selectedDate}
+        aria-label="Event Calendar"
+        nextAriaLabel="Next"
+        prevAriaLabel="Previous"
+        next2AriaLabel="Jump forwards"
+        prev2AriaLabel="Jump backwards"
         tileClassName={({ date, view }) => {
-          if (view === 'month') {
-            const formattedEventDates = events.map(event => event.date.toDateString());
-          if (formattedEventDates.includes(date.toDateString())) {
-            return 'custom-tile';
+          if (view === "month") {
+            const formattedEventDates = events.map(event => event.dtstart.value.toDateString());
+            if (formattedEventDates.includes(date.toDateString())) {
+              return "custom-tile";
             }
           }
-            return '';
-          }}
-        />
+          return '';
+        }}
+      />
     </div>
   );
 }
