@@ -109,7 +109,7 @@ function Events() {
               event.dtstart.value.toDateString()
             );
             if (formattedEventDates.includes(date.toDateString())) {
-              return 'custom-tile';
+              return 'event-tile';
             }
           }
           return '';

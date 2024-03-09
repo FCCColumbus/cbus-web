@@ -252,12 +252,12 @@ footer img {
   max-width: 100%;
 }
 
-.custom-tile {
+.event-tile {
   background-color: red !important;
   color: white !important;
 }
 
-.custom-tile:hover {
+.event-tile:hover {
   background-color: #ff5d5ddc !important;
 }
 
