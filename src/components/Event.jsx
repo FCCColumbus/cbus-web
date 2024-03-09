@@ -17,7 +17,7 @@ function Event({ event }) {
   return (
     <div className="event">
       {/* <img src={href} alt='people coding' className="event-img" /> */}
-      <div className="info">
+      <div className="event-info">
         <h5>{event.summary.value}</h5>
         <table>
           <tbody>

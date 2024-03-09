@@ -136,14 +136,13 @@ h3 {
   font-size: 1.5em;
 }
 
-/* Disabling until events are more fully implemented via API calls */
-/* .event {
+.event {
     max-width: 800px;
     width: 100%;
     margin: 1em;
     display: flex;
     padding: 1em;
-} */
+} 
 
 .event-img {
   height: 300px;
@@ -151,14 +150,14 @@ h3 {
   margin-right: 4em
 }
 
-.info {
+.event-info {
   border: 6px solid #f5b742;
   box-shadow: 1px 5px 5px #999;
   width: 60%;
   padding: 1em;
 }
 
-.info p {
+.event-info p {
   text-align: left;
 }
 
@@ -251,6 +250,17 @@ footer .image-wrapper {
 footer img {
   max-width: 100%;
 }
+
+.calendar-events-container{
+  display: flex;
+  justify-content: flex-start;
+
+}
+
+.calendar {
+  height: min-content;
+}
+
 
 .event-tile {
   background-color: red !important;

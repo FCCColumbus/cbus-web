@@ -93,28 +93,35 @@ function Events() {
         <br />
         and look for FreeCodeCamp Columbus events there!
       </div>
-      {displayedEvents &&
-        displayedEvents.map((event) => <Event event={event} />)}
-      <Calendar
-        onChange={changeDate}
-        value={selectedDate}
-        aria-label="Event Calendar"
-        nextAriaLabel="Next"
-        prevAriaLabel="Previous"
-        next2AriaLabel="Jump forwards"
-        prev2AriaLabel="Jump backwards"
-        tileClassName={({ date, view }) => {
-          if (view === 'month') {
-            const formattedEventDates = events.map((event) =>
-              event.dtstart.value.toDateString()
-            );
-            if (formattedEventDates.includes(date.toDateString())) {
-              return 'event-tile';
+      <div className="calendar-events-container">
+        <Calendar
+        className = "calendar"
+          onChange={changeDate}
+          value={selectedDate}
+          aria-label="Event Calendar"
+          nextAriaLabel="Next"
+          prevAriaLabel="Previous"
+          next2AriaLabel="Jump forwards"
+          prev2AriaLabel="Jump backwards"
+          tileClassName={({ date, view }) => {
+            if (view === 'month') {
+              const formattedEventDates = events.map((event) =>
+                event.dtstart.value.toDateString()
+              );
+              if (formattedEventDates.includes(date.toDateString())) {
+                return 'event-tile';
+              }
             }
-          }
-          return '';
-        }}
-      />
+            return '';
+          }}
+        />
+        <div className="displayed-events">
+        {displayedEvents &&
+        displayedEvents.map((event) => <Event event={event} />)}
+        </div>
+         
+      </div>
+   
     </div>
   );
 }
