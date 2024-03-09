@@ -254,7 +254,7 @@ footer img {
 
 .custom-tile {
   background-color: red !important;
-  color: white;
+  color: white !important;
 }
 
 .custom-tile:hover {
@@ -270,4 +270,5 @@ footer img {
 
 .react-calendar__tile--active {
   background-color: blue !important;
+  color: white !important;
 }
