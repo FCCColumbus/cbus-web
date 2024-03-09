@@ -95,7 +95,7 @@ function Events() {
       </div>
       <div className="calendar-events-container">
         <Calendar
-        className = "calendar"
+          className="calendar"
           onChange={changeDate}
           value={selectedDate}
           aria-label="Event Calendar"
@@ -115,13 +115,15 @@ function Events() {
             return '';
           }}
         />
-        <div className="displayed-events">
-        {displayedEvents &&
-        displayedEvents.map((event) => <Event event={event} />)}
+        <div
+          className={`event-container ${
+            displayedEvents.length > 1 ? 'multiple-events' : ''
+          }`}
+        >
+          {displayedEvents &&
+            displayedEvents.map((event) => <Event event={event} />)}
         </div>
-         
       </div>
-   
     </div>
   );
 }
