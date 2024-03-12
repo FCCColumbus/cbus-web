@@ -32,39 +32,41 @@ function Events() {
     }
   };
 
+  const dateOnly = (date) =>
+    new Date(date.getFullYear(), date.getMonth(), date.getDate());
+
   useEffect(() => {
+    const initialSelectedDate = (eventsData) => {
+      // Assumes events is sorted chronologically.
+      // Returns today's date if there is an event.
+      // If not, returns the nearest future date with an event.
+      // If no future events, returns the last date with an event.
+
+      const currentDate = dateOnly(new Date());
+
+      if (eventsData.length === 0) {
+        return currentDate;
+      }
+
+      const nearestEvent =
+        eventsData.find(
+          (event) => dateOnly(event.dtstart.value) >= currentDate
+        ) || eventsData[eventsData.length - 1];
+      return dateOnly(nearestEvent.dtstart.value);
+    };
+
     const getEventData = async () => {
       try {
         const fetchedData = await fetchData();
         const parsedData = ical.parseString(fetchedData);
-        const setData = parsedData.events;
+        const eventsData = parsedData.events;
 
-        // check for nearest future event
-        const nearestFutureEvent = setData.find(
-          (event) =>
-            event.dtstart.value.toDateString() >= new Date().toDateString()
-        );
-
-        // Check if there's an event on today's date
-        const todayEvent = setData.find(
-          (event) =>
-            event.dtstart.value.toDateString() === new Date().toDateString()
-        );
-
-        if (todayEvent) {
-          setSelectedDate(todayEvent.dtstart.value);
-        } else if (nearestFutureEvent) {
-          setSelectedDate(nearestFutureEvent.dtstart.value);
-        } else {
-          const nearestPastEvent = setData[setData.length - 1];
-          setSelectedDate(nearestPastEvent.dtstart.value);
-        }
-        setEvents(setData);
+        setSelectedDate(initialSelectedDate(eventsData));
+        setEvents(eventsData);
       } catch (error) {
         // console.log(error);
       }
     };
-
     getEventData();
   }, []);
 

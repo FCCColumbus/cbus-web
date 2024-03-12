@@ -37,7 +37,6 @@ function Event({ event }) {
         <div className="meet-up-register">
           <a
             target="_blank"
-            without
             rel="noreferrer"
             href="https://www.meetup.com/register/"
           >
