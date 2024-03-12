@@ -18,6 +18,7 @@ function Events() {
       ),
     [events, selectedDate]
   );
+
   const fetchData = async () => {
     try {
       const response = await fetch(
@@ -27,7 +28,6 @@ function Events() {
       const content = await response.text();
       return content;
     } catch (error) {
-      console.log(error);
       return null;
     }
   };
@@ -61,7 +61,7 @@ function Events() {
         }
         setEvents(setData);
       } catch (error) {
-        console.log(error);
+        // console.log(error);
       }
     };
 
@@ -70,12 +70,6 @@ function Events() {
 
   const changeDate = (newDate) => {
     setSelectedDate(newDate);
-
-    // Check if the new date matches an event's date before updating
-    const matchingEvent = events.find(
-      (event) => event.dtstart.value.toDateString() === newDate.toDateString()
-    );
-    console.log(matchingEvent);
   };
 
   return (
