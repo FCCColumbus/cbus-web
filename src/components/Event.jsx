@@ -4,7 +4,6 @@ function Event({ event }) {
   // add id to event
   // const href = `/coding-${id + 1}.jpg`
   const formattedDateTime = new Intl.DateTimeFormat('en-US', { dateStyle: 'medium', timeStyle: 'short' }).format(event.dtstart.value);
-  console.log(event.location);
 
   /*
     We replace the "narrow non-breaking space" that appears before the AM/PM in some environments

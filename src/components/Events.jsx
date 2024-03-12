@@ -114,8 +114,9 @@ function Events() {
             displayedEvents.length > 1 ? 'multiple-events' : ''
           }`}
         >
-          {displayedEvents &&
-            displayedEvents.map((event) => <Event event={event} />)}
+          {displayedEvents.map((event) => (
+            <Event key={event.uid.value} event={event} />
+          ))}
         </div>
       </div>
     </div>
