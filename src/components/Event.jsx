@@ -1,9 +1,12 @@
-import PropTypes from "prop-types";
+import PropTypes from 'prop-types';
 
 function Event({ event }) {
   // add id to event
   // const href = `/coding-${id + 1}.jpg`
-  const formattedDateTime = new Intl.DateTimeFormat('en-US', { dateStyle: 'medium', timeStyle: 'short' }).format(event.dtstart.value);
+  const formattedDateTime = new Intl.DateTimeFormat('en-US', {
+    dateStyle: 'medium',
+    timeStyle: 'short',
+  }).format(event.dtstart.value);
 
   /*
     We replace the "narrow non-breaking space" that appears before the AM/PM in some environments
@@ -12,7 +15,7 @@ function Event({ event }) {
       - jedduffey@gmail.com, 2023 May 22
   */
   const replacedNonBreakingSpace = formattedDateTime.replace(/\u202f/g, ' ');
-  
+
   return (
     <div className="event">
       {/* <img src={href} alt='people coding' className="event-img" /> */}
@@ -32,22 +35,29 @@ function Event({ event }) {
         </table>
         <p>{event.description.value}</p>
         <div className="meet-up-register">
-          <a target="_blank" without rel="noreferrer" href="https://www.meetup.com/register/">Join Meetup.com</a>
+          <a
+            target="_blank"
+            without
+            rel="noreferrer"
+            href="https://www.meetup.com/register/"
+          >
+            Join Meetup.com
+          </a>
         </div>
       </div>
     </div>
-  )
+  );
 }
 
 Event.propTypes = {
   event: PropTypes.shape({
-    summary: PropTypes.string.isRequired,
-    description: PropTypes.string.isRequired,
+    summary: PropTypes.objectOf(PropTypes.string.isRequired),
+    description: PropTypes.objectOf(PropTypes.string.isRequired),
     dtstart: PropTypes.objectOf(Date),
-    location : PropTypes.string.isRequired,
-    // id : PropTypes.number.isRequired,
+    location: PropTypes.objectOf(PropTypes.string.isRequired),
+    uid: PropTypes.objectOf(PropTypes.string.isRequired),
+    url: PropTypes.objectOf(PropTypes.string.isRequired),
   }).isRequired,
-  // id: PropTypes.number.isRequired,
 };
 
-export default Event
+export default Event;
