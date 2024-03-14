@@ -5,11 +5,12 @@ import Event from "../../components/Event";
 describe("Event", () => {
   it("renders", () => {
     const event = {
-      name: "Test Event",
-      time: new Date('2023-04-17T18:30:00'),
-      location: "Test Location",
-      description: "This is a test event.",
-      id: 'test-id'
+      summary: {value: "Test Event"},
+      description: {value: "This is a test event."},
+      dtstart: {value: new Date('2023-04-17T18:30:00')},
+      location: {value: "Test Location"},
+      uid: {value: "test-id"},
+      url: {value: "meetup.com/testgroup/events/test"}
     };
 
     const view = renderer.create(<Event event={event} id={1} />);
