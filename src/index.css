@@ -183,7 +183,7 @@ h3 {
 }
 
 .react-calendar__tile--active:hover {
-  background-color: #5D5DFFDC !important;
+  background-color: blue !important;
 }
 
 .event-container {
