@@ -9,15 +9,14 @@ import 'react-calendar/dist/Calendar.css';
 function Events() {
   const [selectedDate, setSelectedDate] = useState(new Date());
   const [events, setEvents] = useState([]);
+  const [loaded, setLoaded] = useState(false);
 
-  const displayedEvents = useMemo(
-    () =>
-      events.filter(
-        (event) =>
-          event.dtstart.value.toDateString() === selectedDate.toDateString()
-      ),
-    [events, selectedDate]
-  );
+  const displayedEvents = useMemo(() => {
+    const selectedDateString = selectedDate.toDateString();
+    return events.filter(
+      (event) => event.dtstart.value.toDateString() === selectedDateString
+    );
+  }, [events, selectedDate]);
 
   const dateOnly = (date) =>
     new Date(date.getFullYear(), date.getMonth(), date.getDate());
@@ -54,6 +53,9 @@ function Events() {
     };
     eventsData().then((data) => {
       setEvents(data);
+      if (data.length > 0) {
+        setLoaded(true);
+      }
     });
   }, []);
 
@@ -114,34 +116,36 @@ function Events() {
         <br />
         and look for FreeCodeCamp Columbus events there!
       </div>
-      <div className="calendar-events-container">
-        <Calendar
-          className="calendar"
-          onChange={setSelectedDate}
-          value={selectedDate}
-          locale="en-US"
-          minDetail="year"
-          aria-label="Event Calendar"
-          nextAriaLabel="Next"
-          prevAriaLabel="Previous"
-          next2AriaLabel="Jump forwards"
-          prev2AriaLabel="Jump backwards"
-          tileClassName={({ date, view }) =>
-            view === 'month' && eventDateTimeSet.has(date.getTime())
-              ? 'event-tile'
-              : ''
-          }
-        />
-        <div
-          className={`event-container ${
-            displayedEvents.length > 1 ? 'multiple-events' : ''
-          }`}
-        >
-          {displayedEvents.map((event) => (
-            <Event key={event.uid.value} event={event} />
-          ))}
+      {loaded && (
+        <div className="calendar-events-container">
+          <Calendar
+            className="calendar"
+            onChange={setSelectedDate}
+            value={selectedDate}
+            locale="en-US"
+            minDetail="year"
+            aria-label="Event Calendar"
+            nextAriaLabel="Next"
+            prevAriaLabel="Previous"
+            next2AriaLabel="Jump forwards"
+            prev2AriaLabel="Jump backwards"
+            tileClassName={({ date, view }) =>
+              view === 'month' && eventDateTimeSet.has(date.getTime())
+                ? 'event-tile'
+                : ''
+            }
+          />
+          <div
+            className={`event-container ${
+              displayedEvents.length > 1 ? 'multiple-events' : ''
+            }`}
+          >
+            {displayedEvents.map((event) => (
+              <Event key={event.uid.value} event={event} />
+            ))}
+          </div>
         </div>
-      </div>
+      )}
     </div>
   );
 }
