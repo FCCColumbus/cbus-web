@@ -163,7 +163,7 @@ exports[`Events renders 1`] = `
                   </abbr>
                 </div>
                 <div
-                  className="react-calendar__month-view__weekdays__weekday"
+                  className="react-calendar__month-view__weekdays__weekday react-calendar__month-view__weekdays__weekday--current"
                   style={
                     Object {
                       "flexBasis": "14.285714285714286%",
@@ -184,7 +184,7 @@ exports[`Events renders 1`] = `
                   </abbr>
                 </div>
                 <div
-                  className="react-calendar__month-view__weekdays__weekday react-calendar__month-view__weekdays__weekday--current"
+                  className="react-calendar__month-view__weekdays__weekday"
                   style={
                     Object {
                       "flexBasis": "14.285714285714286%",
@@ -653,7 +653,7 @@ exports[`Events renders 1`] = `
                   </abbr>
                 </button>
                 <button
-                  className="react-calendar__tile react-calendar__tile--now react-calendar__tile--active react-calendar__tile--range react-calendar__tile--rangeStart react-calendar__tile--rangeEnd react-calendar__tile--rangeBothEnds react-calendar__month-view__days__day"
+                  className="react-calendar__tile react-calendar__month-view__days__day"
                   onClick={[Function]}
                   style={
                     Object {
@@ -785,7 +785,7 @@ exports[`Events renders 1`] = `
                   </abbr>
                 </button>
                 <button
-                  className="react-calendar__tile react-calendar__month-view__days__day"
+                  className="react-calendar__tile react-calendar__tile--now react-calendar__tile--active react-calendar__tile--range react-calendar__tile--rangeStart react-calendar__tile--rangeEnd react-calendar__tile--rangeBothEnds react-calendar__month-view__days__day"
                   onClick={[Function]}
                   style={
                     Object {

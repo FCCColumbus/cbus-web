@@ -74,7 +74,10 @@ h2 {
 
 .splash {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsive grid */
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(300px, 1fr)
+  ); /* Responsive grid */
   grid-gap: 20px; /* Space between grid items */
   max-width: 1600px;
   margin: auto; /* Centering the grid */
@@ -88,7 +91,6 @@ h2 {
   text-align: left;
   grid-column: 1 / -1; /* Ensure full width on smaller screens */
 }
-
 
 .splash img {
   width: 100%; /* Adjusted for better responsiveness */
@@ -180,6 +182,10 @@ h3 {
   color: white !important;
 }
 
+.react-calendar__tile--active:hover {
+  background-color: #5D5DFFDC !important;
+}
+
 .event-container {
   display: flex;
   flex-direction: column;
@@ -267,7 +273,8 @@ th {
   width: 140px;
 }
 
-.members-avatar, .contributors-avatar {
+.members-avatar,
+.contributors-avatar {
   width: 1000px;
 }
 
@@ -321,7 +328,8 @@ footer img {
     grid-template-columns: 1fr 1fr; /* 2 columns for wider screens */
   }
 
-  .byline, .splash img {
+  .byline,
+  .splash img {
     grid-column: auto; /* Resets to default grid behavior */
   }
 }
