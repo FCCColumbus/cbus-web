@@ -32,10 +32,10 @@ function Events() {
     }
   };
 
-  const dateOnly = (date) =>
-    new Date(date.getFullYear(), date.getMonth(), date.getDate());
-
   useEffect(() => {
+    const dateOnly = (date) =>
+      new Date(date.getFullYear(), date.getMonth(), date.getDate());
+
     const initialSelectedDate = (eventsData) => {
       // Assumes events is sorted chronologically.
       // Returns today's date if there is an event.
@@ -48,11 +48,31 @@ function Events() {
         return currentDate;
       }
 
-      const nearestEvent =
-        eventsData.find(
-          (event) => dateOnly(event.dtstart.value) >= currentDate
-        ) || eventsData[eventsData.length - 1];
-      return dateOnly(nearestEvent.dtstart.value);
+      const lastEventDate = dateOnly(
+        eventsData[eventsData.length - 1].dtstart.value
+      );
+      if (lastEventDate.getTime() <= currentDate.getTime()) {
+        return lastEventDate;
+      }
+
+      // Binary search for nearest future date with an event
+      let left = 0;
+      let right = eventsData.length - 1;
+      while (left < right) {
+        const mid = Math.floor((left + right) / 2);
+        const midDate = dateOnly(eventsData[mid].dtstart.value);
+
+        if (midDate.getTime() === currentDate.getTime()) {
+          return currentDate;
+        }
+
+        if (midDate.getTime() > currentDate.getTime()) {
+          right = mid;
+        } else {
+          left = mid + 1;
+        }
+      }
+      return dateOnly(eventsData[left].dtstart.value);
     };
 
     const getEventData = async () => {
