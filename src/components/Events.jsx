@@ -121,10 +121,10 @@ function Events() {
           prev2AriaLabel="Jump backwards"
           tileClassName={({ date, view }) => {
             if (view === 'month') {
-              const formattedEventDates = events.map((event) =>
-                event.dtstart.value.toDateString()
+              const formattedEventDates = new Set(
+                events.map((event) => event.dtstart.value.toDateString())
               );
-              if (formattedEventDates.includes(date.toDateString())) {
+              if (formattedEventDates.has(date.toDateString())) {
                 return 'event-tile';
               }
             }
