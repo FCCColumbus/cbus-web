@@ -119,6 +119,8 @@ function Events() {
           className="calendar"
           onChange={setSelectedDate}
           value={selectedDate}
+          locale="en-US"
+          minDetail="year"
           aria-label="Event Calendar"
           nextAriaLabel="Next"
           prevAriaLabel="Previous"
