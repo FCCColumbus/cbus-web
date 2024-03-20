@@ -99,10 +99,6 @@ function Events() {
     setSelectedDate(initialSelectedDate());
   }, [events, eventDateTimeSet]);
 
-  const changeDate = (newDate) => {
-    setSelectedDate(newDate);
-  };
-
   return (
     <div id="events" className="events">
       <h3>Upcoming Events</h3>
@@ -121,7 +117,7 @@ function Events() {
       <div className="calendar-events-container">
         <Calendar
           className="calendar"
-          onChange={changeDate}
+          onChange={setSelectedDate}
           value={selectedDate}
           aria-label="Event Calendar"
           nextAriaLabel="Next"
