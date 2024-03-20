@@ -19,6 +19,16 @@ function Events() {
     [events, selectedDate]
   );
 
+  const dateOnly = (date) =>
+    new Date(date.getFullYear(), date.getMonth(), date.getDate());
+
+  // Set of event dates in number of milliseconds
+  const eventDateTimeSet = useMemo(
+    () =>
+      new Set(events.map((event) => dateOnly(event.dtstart.value).getTime())),
+    [events]
+  );
+
   const fetchData = async () => {
     try {
       const response = await fetch(
@@ -33,10 +43,22 @@ function Events() {
   };
 
   useEffect(() => {
-    const dateOnly = (date) =>
-      new Date(date.getFullYear(), date.getMonth(), date.getDate());
+    const eventsData = async () => {
+      try {
+        const fetchedData = await fetchData();
+        const parsedData = ical.parseString(fetchedData);
+        return parsedData.events;
+      } catch (error) {
+        return [];
+      }
+    };
+    eventsData().then((data) => {
+      setEvents(data);
+    });
+  }, []);
 
-    const initialSelectedDate = (eventsData) => {
+  useEffect(() => {
+    const initialSelectedDate = () => {
       // Assumes events is sorted chronologically.
       // Returns today's date if there is an event.
       // If not, returns the nearest future date with an event.
@@ -44,27 +66,27 @@ function Events() {
 
       const currentDate = dateOnly(new Date());
 
-      if (eventsData.length === 0) {
+      if (events.length === 0) {
+        return currentDate;
+      }
+      // Check if today's date has an event
+      if (eventDateTimeSet.has(currentDate.getTime())) {
         return currentDate;
       }
 
-      const lastEventDate = dateOnly(
-        eventsData[eventsData.length - 1].dtstart.value
-      );
-      if (lastEventDate.getTime() <= currentDate.getTime()) {
+      // Check if today's date is after the last event date
+      const lastEventDate = dateOnly(events[events.length - 1].dtstart.value);
+      if (lastEventDate.getTime() < currentDate.getTime()) {
         return lastEventDate;
       }
 
       // Binary search for nearest future date with an event
+      // when there's no event today
       let left = 0;
-      let right = eventsData.length - 1;
+      let right = events.length - 1;
       while (left < right) {
         const mid = Math.floor((left + right) / 2);
-        const midDate = dateOnly(eventsData[mid].dtstart.value);
-
-        if (midDate.getTime() === currentDate.getTime()) {
-          return currentDate;
-        }
+        const midDate = dateOnly(events[mid].dtstart.value);
 
         if (midDate.getTime() > currentDate.getTime()) {
           right = mid;
@@ -72,23 +94,10 @@ function Events() {
           left = mid + 1;
         }
       }
-      return dateOnly(eventsData[left].dtstart.value);
+      return dateOnly(events[left].dtstart.value);
     };
-
-    const getEventData = async () => {
-      try {
-        const fetchedData = await fetchData();
-        const parsedData = ical.parseString(fetchedData);
-        const eventsData = parsedData.events;
-
-        setSelectedDate(initialSelectedDate(eventsData));
-        setEvents(eventsData);
-      } catch (error) {
-        // console.log(error);
-      }
-    };
-    getEventData();
-  }, []);
+    setSelectedDate(initialSelectedDate());
+  }, [events, eventDateTimeSet]);
 
   const changeDate = (newDate) => {
     setSelectedDate(newDate);
@@ -119,17 +128,11 @@ function Events() {
           prevAriaLabel="Previous"
           next2AriaLabel="Jump forwards"
           prev2AriaLabel="Jump backwards"
-          tileClassName={({ date, view }) => {
-            if (view === 'month') {
-              const formattedEventDates = new Set(
-                events.map((event) => event.dtstart.value.toDateString())
-              );
-              if (formattedEventDates.has(date.toDateString())) {
-                return 'event-tile';
-              }
-            }
-            return '';
-          }}
+          tileClassName={({ date, view }) =>
+            view === 'month' && eventDateTimeSet.has(date.getTime())
+              ? 'event-tile'
+              : ''
+          }
         />
         <div
           className={`event-container ${
