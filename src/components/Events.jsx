@@ -11,21 +11,26 @@ function Events() {
   const [events, setEvents] = useState([]);
   const [loaded, setLoaded] = useState(false);
 
-  const displayedEvents = useMemo(() => {
-    const selectedDateString = selectedDate.toDateString();
-    return events.filter(
-      (event) => event.dtstart.value.toDateString() === selectedDateString
-    );
-  }, [events, selectedDate]);
-
   const dateOnly = (date) =>
     new Date(date.getFullYear(), date.getMonth(), date.getDate());
 
-  // Set of event dates in number of milliseconds
-  const eventDateTimeSet = useMemo(
-    () =>
-      new Set(events.map((event) => dateOnly(event.dtstart.value).getTime())),
-    [events]
+  const eventsByDateString = useMemo(() => {
+    // Key: date string of date object
+    // Value: Array of event objects
+    const eventsDict = {};
+    events.forEach((event) => {
+      const dateString = event.dtstart.value.toDateString();
+      if (!eventsDict[dateString]) {
+        eventsDict[dateString] = [];
+      }
+      eventsDict[dateString].push(event);
+    });
+    return eventsDict;
+  }, [events]);
+
+  const displayedEvents = useMemo(
+    () => eventsByDateString[selectedDate.toDateString()] ?? [],
+    [eventsByDateString, selectedDate]
   );
 
   const fetchData = async () => {
@@ -72,7 +77,7 @@ function Events() {
         return currentDate;
       }
       // Check if today's date has an event
-      if (eventDateTimeSet.has(currentDate.getTime())) {
+      if (eventsByDateString[currentDate.toDateString()]) {
         return currentDate;
       }
 
@@ -99,7 +104,7 @@ function Events() {
       return dateOnly(events[left].dtstart.value);
     };
     setSelectedDate(initialSelectedDate());
-  }, [events, eventDateTimeSet]);
+  }, [events, eventsByDateString]);
 
   return (
     <div id="events" className="events">
@@ -130,7 +135,7 @@ function Events() {
             next2AriaLabel="Jump forwards"
             prev2AriaLabel="Jump backwards"
             tileClassName={({ date, view }) =>
-              view === 'month' && eventDateTimeSet.has(date.getTime())
+              view === 'month' && eventsByDateString[date.toDateString()]
                 ? 'event-tile'
                 : ''
             }
