@@ -1,5 +1,5 @@
 import Calendar from 'react-calendar';
-import { useState, useEffect, useMemo } from 'react';
+import { useState, useEffect, useMemo, useCallback } from 'react';
 import ical from 'cal-parser';
 
 import Event from './Event';
@@ -106,6 +106,14 @@ function Events() {
     setSelectedDate(initialSelectedDate());
   }, [events, eventsByDateString]);
 
+  const tileClassName = useCallback(
+    ({ date, view }) =>
+      view === 'month' && eventsByDateString[date.toDateString()]
+        ? 'event-tile'
+        : '',
+    [eventsByDateString]
+  );
+
   return (
     <div id="events" className="events">
       <h3>Upcoming Events</h3>
@@ -134,11 +142,7 @@ function Events() {
             prevAriaLabel="Previous"
             next2AriaLabel="Jump forwards"
             prev2AriaLabel="Jump backwards"
-            tileClassName={({ date, view }) =>
-              view === 'month' && eventsByDateString[date.toDateString()]
-                ? 'event-tile'
-                : ''
-            }
+            tileClassName={tileClassName}
           />
           <div
             className={`event-container ${
