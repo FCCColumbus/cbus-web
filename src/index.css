@@ -213,6 +213,8 @@ h3 {
 }
 
 .event-info {
+  width: 100%;
+  overflow-wrap: break-word;
   border: 6px solid #f5b742;
   box-shadow: 1px 5px 5px #999;
   padding: 1em;
