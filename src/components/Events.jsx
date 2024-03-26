@@ -26,7 +26,7 @@ function Events() {
         <br />
         and look for FreeCodeCamp Columbus events there!
       </div>
-      {events.length && (
+      {events.length > 0 && (
         <div className="calendar-events-container">
           <Calendar
             className="calendar"
