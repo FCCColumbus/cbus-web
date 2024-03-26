@@ -75,7 +75,7 @@ const useCalendar = (events) => {
     [eventsByDateString]
   );
 
-  return {selectedDate, setSelectedDate, displayedEvents, tileClassName}
-}
+  return { selectedDate, setSelectedDate, displayedEvents, tileClassName };
+};
 
 export default useCalendar;
