@@ -26,8 +26,27 @@ const useCalendar = (events) => {
   );
 
   useEffect(() => {
-    const initialSelectedDate = () => {
+    const nearestFutureEventDate = (currentDate) => {
+      // Binary search for nearest future date with an event
+      // when there's no event today.
       // Assumes events is sorted chronologically.
+
+      let left = 0;
+      let right = events.length - 1;
+      while (left < right) {
+        const mid = Math.floor((left + right) / 2);
+        const midDate = dateOnly(events[mid].dtstart.value);
+
+        if (midDate.getTime() > currentDate.getTime()) {
+          right = mid;
+        } else {
+          left = mid + 1;
+        }
+      }
+      return dateOnly(events[left].dtstart.value);
+    };
+
+    const initialSelectedDate = () => {
       // Returns today's date if there is an event.
       // If not, returns the nearest future date with an event.
       // If no future events, returns the last date with an event.
@@ -48,21 +67,7 @@ const useCalendar = (events) => {
         return lastEventDate;
       }
 
-      // Binary search for nearest future date with an event
-      // when there's no event today
-      let left = 0;
-      let right = events.length - 1;
-      while (left < right) {
-        const mid = Math.floor((left + right) / 2);
-        const midDate = dateOnly(events[mid].dtstart.value);
-
-        if (midDate.getTime() > currentDate.getTime()) {
-          right = mid;
-        } else {
-          left = mid + 1;
-        }
-      }
-      return dateOnly(events[left].dtstart.value);
+      return nearestFutureEventDate(currentDate);
     };
     setSelectedDate(initialSelectedDate());
   }, [events, eventsByDateString]);
