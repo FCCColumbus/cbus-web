@@ -1,15 +1,13 @@
 import Calendar from 'react-calendar';
 import { useState, useEffect, useMemo, useCallback } from 'react';
-import ical from 'cal-parser';
 
 import Event from './Event';
-
+import useEvents from '../hooks/useEvents';
 import 'react-calendar/dist/Calendar.css';
 
 function Events() {
+  const { events } = useEvents();
   const [selectedDate, setSelectedDate] = useState(new Date());
-  const [events, setEvents] = useState([]);
-  const [loaded, setLoaded] = useState(false);
 
   const dateOnly = (date) =>
     new Date(date.getFullYear(), date.getMonth(), date.getDate());
@@ -32,37 +30,6 @@ function Events() {
     () => eventsByDateString[selectedDate.toDateString()] ?? [],
     [eventsByDateString, selectedDate]
   );
-
-  const fetchData = async () => {
-    try {
-      const response = await fetch(
-        'https://docs.google.com/document/d/1OcnWWt1qHaJWE-8v_FPtNO8DKviRQ7DMaqylupuvPXE/export?format=txt'
-      );
-
-      const content = await response.text();
-      return content;
-    } catch (error) {
-      return null;
-    }
-  };
-
-  useEffect(() => {
-    const eventsData = async () => {
-      try {
-        const fetchedData = await fetchData();
-        const parsedData = ical.parseString(fetchedData);
-        return parsedData.events;
-      } catch (error) {
-        return [];
-      }
-    };
-    eventsData().then((data) => {
-      setEvents(data);
-      if (data.length > 0) {
-        setLoaded(true);
-      }
-    });
-  }, []);
 
   useEffect(() => {
     const initialSelectedDate = () => {
@@ -129,7 +96,7 @@ function Events() {
         <br />
         and look for FreeCodeCamp Columbus events there!
       </div>
-      {loaded && (
+      {events.length && (
         <div className="calendar-events-container">
           <Calendar
             className="calendar"
