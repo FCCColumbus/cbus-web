@@ -9,10 +9,12 @@ body {
 header {
   background-color: #97dad0;
   color: #fff;
+  color: #fff;
 }
 
 nav {
   background-color: #f5fafa;
+  padding: 0.5em 1em;
   padding: 0.5em 1em;
 }
 
@@ -47,6 +49,8 @@ header h1 {
   margin: 0;
   padding-top: 0.25em;
   padding-bottom: 0.25em;
+  padding-top: 0.25em;
+  padding-bottom: 0.25em;
   width: 100%;
   text-align: center;
   display: block;
@@ -54,6 +58,7 @@ header h1 {
 
 .big-logo {
   height: 50px;
+  margin-left: 0.75em;
   margin-left: 0.75em;
 }
 
@@ -64,11 +69,15 @@ h2 {
   display: block;
   width: 100%;
   padding: 0.5em;
+  padding: 0.5em;
 }
 
 .splash {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsive grid */
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(300px, 1fr)
+  ); /* Responsive grid */
   grid-gap: 20px; /* Space between grid items */
   max-width: 1600px;
   margin: auto; /* Centering the grid */
@@ -82,7 +91,6 @@ h2 {
   text-align: left;
   grid-column: 1 / -1; /* Ensure full width on smaller screens */
 }
-
 
 .splash img {
   width: 100%; /* Adjusted for better responsiveness */
@@ -144,16 +152,59 @@ h3 {
   font-size: 1.5em;
 }
 
-/* Disabling until events are more fully implemented via API calls */
-/* .event {
-    max-width: 800px;
-    width: 100%;
-    margin: 1em;
-    display: flex;
-    padding: 1em;
-} */
+.calendar-events-container {
+  display: flex;
+  width: 60%;
+  justify-content: space-between;
+}
 
+.react-calendar {
+  height: min-content;
+  margin: 2em;
+}
 
+.event-tile {
+  background-color: red !important;
+  color: white !important;
+}
+
+.event-tile:hover {
+  background-color: #ff5d5ddc !important;
+}
+
+/* disabling weekend tiles from being red */
+.react-calendar__month-view__days__day--weekend:not(.react-calendar__month-view__days__day--neighboringMonth) {
+  color: black;
+}
+
+.react-calendar__tile--active {
+  background-color: blue !important;
+  color: white !important;
+}
+
+.react-calendar__tile--active:hover {
+  background-color: blue !important;
+}
+
+.event-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.multiple-events {
+  overflow-y: scroll;
+  height: 600px;
+}
+
+.event {
+  max-width: 800px;
+  width: 60%;
+  margin: 1em;
+  display: flex;
+  padding: 1em;
+}
 
 .event-img {
   height: 300px;
@@ -161,14 +212,15 @@ h3 {
   margin-right: 4em;
 }
 
-.info {
+.event-info {
+  width: 100%;
+  overflow-wrap: break-word;
   border: 6px solid #f5b742;
   box-shadow: 1px 5px 5px #999;
-  width: 60%;
   padding: 1em;
 }
 
-.info p {
+.event-info p {
   text-align: left;
 }
 
@@ -186,6 +238,7 @@ table {
 th,
 td {
   text-align: left;
+  padding-right: 0.5em;
   padding-right: 0.5em;
 }
 
@@ -222,7 +275,8 @@ th {
   width: 140px;
 }
 
-.members-avatar, .contributors-avatar {
+.members-avatar,
+.contributors-avatar {
   width: 1000px;
 }
 
@@ -276,7 +330,8 @@ footer img {
     grid-template-columns: 1fr 1fr; /* 2 columns for wider screens */
   }
 
-  .byline, .splash img {
+  .byline,
+  .splash img {
     grid-column: auto; /* Resets to default grid behavior */
   }
 }

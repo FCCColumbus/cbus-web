@@ -1,37 +1,57 @@
-// import Event from './Event'
+import Calendar from 'react-calendar';
+import Event from './Event';
+
+import useCalendar from '../hooks/useCalendar';
+import useEvents from '../hooks/useEvents';
+
+import 'react-calendar/dist/Calendar.css';
 
 function Events() {
-  // The arrays below are retained for future reference,
-  // pending implementation of some API call to retrieve events from Google Calendar or Meetup.com, for example.
-
-  // const events = [{
-  //     name: "regular meetup",
-  //     description: "have pizza and talk about code",
-  //     time: new Date('2023-04-17T18:30:00'),
-  //     location: 'Co-Hatch Upper Arlington',
-  //     id: 'event-01'
-  // }, {
-  //     name: "What are web components?",
-  //     description: "John will give a lecture about what web components are and why we should care. Don't worry, there'll be pizza!",
-  //     time: new Date('2023-05-17T18:30:00'),
-  //     location: 'Co-Hatch Upper Arlington',
-  //     id: 'event-02'
-  // }]
+  const { events } = useEvents();
+  const { selectedDate, setSelectedDate, displayedEvents, tileClassName } =
+    useCalendar(events);
 
   return (
     <div id="events" className="events">
       <h3>Upcoming Events</h3>
       <div id="events-placeholder-text">
         The &quot;Events&quot; section is under development.
-        <br /><br />
+        <br />
+        <br />
         In the meantime, please visit
         <br />
-        <a href="https://www.meetup.com/techlifecolumbus/events/">https://www.meetup.com/techlifecolumbus/events/</a>
+        <a href="https://www.meetup.com/techlifecolumbus/events/">
+          https://www.meetup.com/techlifecolumbus/events/
+        </a>
         <br />
         and look for FreeCodeCamp Columbus events there!
       </div>
-      {/* The array mapping below is retained for future reference.  */}
-      {/* {events.map((event, i) => <Event event={event} key={event.id} id={i} />)} */}
+      {events.length > 0 && (
+        <div className="calendar-events-container">
+          <Calendar
+            className="calendar"
+            onChange={setSelectedDate}
+            value={selectedDate}
+            locale="en-US"
+            minDetail="year"
+            aria-label="Event Calendar"
+            nextAriaLabel="Next"
+            prevAriaLabel="Previous"
+            next2AriaLabel="Jump forwards"
+            prev2AriaLabel="Jump backwards"
+            tileClassName={tileClassName}
+          />
+          <div
+            className={`event-container ${
+              displayedEvents.length > 1 ? 'multiple-events' : ''
+            }`}
+          >
+            {displayedEvents.map((event) => (
+              <Event key={event.uid.value} event={event} />
+            ))}
+          </div>
+        </div>
+      )}
     </div>
   );
 }

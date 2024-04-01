@@ -4,13 +4,8 @@ exports[`Event renders 1`] = `
 <div
   className="event"
 >
-  <img
-    alt="people coding"
-    className="event-img"
-    src="/coding-2.jpg"
-  />
   <div
-    className="info"
+    className="event-info"
   >
     <h5>
       Test Event
@@ -38,6 +33,17 @@ exports[`Event renders 1`] = `
     <p>
       This is a test event.
     </p>
+    <div
+      className="meet-up-register"
+    >
+      <a
+        href="https://www.meetup.com/register/"
+        rel="noreferrer"
+        target="_blank"
+      >
+        Join Meetup.com
+      </a>
+    </div>
   </div>
 </div>
 `;
