@@ -1,4 +1,4 @@
-export default [
+const links = [
   { href: '/', text: 'Home' },
   { href: '#about', text: 'About' },
   { href: 'https://www.freecodecamp.org/', text: 'FreeCodeCamp' },
@@ -7,3 +7,4 @@ export default [
   { href: '#events', text: 'Events' },
   { href: 'https://github.com/FCCColumbus/cbus-web/graphs/contributors', text: 'Contributors' },
 ];
+export default links;
