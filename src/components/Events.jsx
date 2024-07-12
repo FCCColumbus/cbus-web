@@ -20,7 +20,7 @@ function Events() {
         <br />
         In the meantime, please visit
         <br />
-        <a href="https://www.meetup.com/techlifecolumbus/events/">
+        <a href="https://www.meetup.com/techlifecolumbus/events/" target="_blank">
           https://www.meetup.com/techlifecolumbus/events/
         </a>
         <br />

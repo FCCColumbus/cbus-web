@@ -1,9 +1,9 @@
 function Members() {
   const admin = [
     { id: 0, firstName: 'John', lastName: 'Riley', title: 'Admin & Coding Mentor', imgUrl: 'https://avatars.githubusercontent.com/u/41979303?v=4' },
-    { id: 1, firstName: 'Kent', lastName: 'Utterback', title: 'Admin Emeritus & Coding Mentor', imgUrl: 'https://avatars.githubusercontent.com/u/17324971?v=4' },
+    { id: 1, firstName: 'Kent', lastName: 'Utterback', title: 'Coding Mentor & Admin Emeritus', imgUrl: 'https://avatars.githubusercontent.com/u/17324971?v=4' },
     { id: 2, firstName: 'Amy', lastName: 'Bedinghaus', title: 'Admin Emeritus', imgUrl: 'https://avatars.githubusercontent.com/u/28076677?v=4' },
-    { id: 3, firstName: 'Austin', lastName: 'Truss', title: 'Admin Emeritus', imgUrl: 'https://media.licdn.com/dms/image/C5603AQGQpynBhWiZLA/profile-displayphoto-shrink_200_200/0/1517355585710?e=1696464000&v=beta&t=DrPEzm5U1we4G7qUPoFrAA5gw_MHSN3dU8_02iWZYRA' },
+    { id: 3, firstName: 'Austin', lastName: 'Truss', title: 'Admin Emeritus', imgUrl: 'https://media.licdn.com/dms/image/C5603AQGQpynBhWiZLA/profile-displayphoto-shrink_800_800/0/1517355585710?e=2147483647&v=beta&t=_BacCY0-dJmRQDR5Pr7B30YUPslOnzlHqg1YYqclWNQ' },
     { id: 4, firstName: 'Kevin', lastName: 'Bruland', title: 'Admin Emeritus', imgUrl: 'https://avatars.githubusercontent.com/u/17850505?v=4' },
     { id: 5, firstName: 'Sarah', lastName: 'Lilly-Bruland', title: 'Admin Emeritus', imgUrl: 'https://avatars.githubusercontent.com/u/17872422?v=4' },
     { id: 6, firstName: 'Justin', lastName: 'Woodward', title: 'Admin Emeritus', imgUrl: 'https://avatars.githubusercontent.com/u/17994108?v=4' },
