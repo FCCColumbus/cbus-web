@@ -50,7 +50,7 @@ exports[`Footer renders 1`] = `
   </nav>
   <p>
     Copyright Free Code Camp Columbus 2023 - 
-    2023
+    2024
   </p>
   <a
     className="image-wrapper"

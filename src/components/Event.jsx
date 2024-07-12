@@ -1,7 +1,13 @@
-function Event({ event, id }) {
-  const href = `/coding-${id + 1}.jpg`
+import PropTypes from 'prop-types';
 
-  const formattedDateTime = new Intl.DateTimeFormat('en-US', { dateStyle: 'medium', timeStyle: 'short' }).format(event.time);
+function Event({ event }) {
+  // add id to event
+  // const href = `/coding-${id + 1}.jpg`
+  const formattedDateTime = new Intl.DateTimeFormat('en-US', {
+    dateStyle: 'medium',
+    timeStyle: 'short',
+  }).format(event.dtstart.value);
+
   /*
     We replace the "narrow non-breaking space" that appears before the AM/PM in some environments
     with a regular space to help prevent snapshot test failures.
@@ -12,9 +18,9 @@ function Event({ event, id }) {
 
   return (
     <div className="event">
-      <img src={href} alt='people coding' className="event-img" />
-      <div className="info">
-        <h5>{event.name}</h5>
+      {/* <img src={href} alt='people coding' className="event-img" /> */}
+      <div className="event-info">
+        <h5>{event.summary.value}</h5>
         <table>
           <tbody>
             <tr>
@@ -23,14 +29,34 @@ function Event({ event, id }) {
             </tr>
             <tr>
               <th>location:</th>
-              <td>{event.location}</td>
+              {event.location && <td>{event.location.value}</td>}
             </tr>
           </tbody>
         </table>
-        <p>{event.description}</p>
+        <p>{event.description.value}</p>
+        <div className="meet-up-register">
+          <a
+            target="_blank"
+            rel="noreferrer"
+            href="https://www.meetup.com/register/"
+          >
+            Join Meetup.com
+          </a>
+        </div>
       </div>
     </div>
-  )
+  );
 }
 
-export default Event
+Event.propTypes = {
+  event: PropTypes.shape({
+    summary: PropTypes.objectOf(PropTypes.string.isRequired),
+    description: PropTypes.objectOf(PropTypes.string.isRequired),
+    dtstart: PropTypes.objectOf(Date),
+    location: PropTypes.objectOf(PropTypes.string.isRequired),
+    uid: PropTypes.objectOf(PropTypes.string.isRequired),
+    url: PropTypes.objectOf(PropTypes.string.isRequired),
+  }).isRequired,
+};
+
+export default Event;

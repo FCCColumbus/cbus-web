@@ -3,7 +3,7 @@
 exports[`Members renders 1`] = `
 <div>
   <div
-    className="members"
+    className="admins"
   >
     <h3>
       Meet the Admins
@@ -40,7 +40,7 @@ exports[`Members renders 1`] = `
           src="https://avatars.githubusercontent.com/u/17324971?v=4"
         />
         <h5>
-          Admin Emeritus & Coding Mentor
+          Coding Mentor & Admin Emeritus
         </h5>
       </div>
       <div>
@@ -69,7 +69,7 @@ exports[`Members renders 1`] = `
         <img
           alt="beautiful headshot of Austin Truss."
           className="avatar admin-avatar"
-          src="https://media.licdn.com/dms/image/C5603AQGQpynBhWiZLA/profile-displayphoto-shrink_200_200/0/1517355585710?e=1696464000&v=beta&t=DrPEzm5U1we4G7qUPoFrAA5gw_MHSN3dU8_02iWZYRA"
+          src="https://media.licdn.com/dms/image/C5603AQGQpynBhWiZLA/profile-displayphoto-shrink_800_800/0/1517355585710?e=2147483647&v=beta&t=_BacCY0-dJmRQDR5Pr7B30YUPslOnzlHqg1YYqclWNQ"
         />
         <h5>
           Admin Emeritus
@@ -126,75 +126,23 @@ exports[`Members renders 1`] = `
     </div>
   </div>
   <div
-    className="members"
+    className="contributors"
   >
     <h3>
       Meet the Contributors
     </h3>
-    <div
-      className="row"
+    <a
+      className="contributors-link"
+      href="https://github.com/FCCColumbus/cbus-web/graphs/contributors"
+      rel="noreferrer"
+      target="_blank"
     >
-      <div>
-        <img
-          alt="beautiful headshot of John."
-          className="avatar member-avatar"
-          src="/head.png"
-        />
-        <h4>
-          John
-        </h4>
-      </div>
-      <div>
-        <img
-          alt="beautiful headshot of Ismael."
-          className="avatar member-avatar"
-          src="/head.png"
-        />
-        <h4>
-          Ismael
-        </h4>
-      </div>
-      <div>
-        <img
-          alt="beautiful headshot of Nirvignesh."
-          className="avatar member-avatar"
-          src="/head.png"
-        />
-        <h4>
-          Nirvignesh
-        </h4>
-      </div>
-      <div>
-        <img
-          alt="beautiful headshot of Tijana."
-          className="avatar member-avatar"
-          src="/head.png"
-        />
-        <h4>
-          Tijana
-        </h4>
-      </div>
-      <div>
-        <img
-          alt="beautiful headshot of Jennifer."
-          className="avatar member-avatar"
-          src="/head.png"
-        />
-        <h4>
-          Jennifer
-        </h4>
-      </div>
-      <div>
-        <img
-          alt="beautiful headshot of Kellan."
-          className="avatar member-avatar"
-          src="/head.png"
-        />
-        <h4>
-          Kellan
-        </h4>
-      </div>
-    </div>
+      <img
+        alt="beautiful headshots of our members"
+        className="contributors-avatar"
+        src="https://contrib.rocks/image?repo=FCCColumbus/cbus-web"
+      />
+    </a>
   </div>
 </div>
 `;

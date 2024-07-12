@@ -4,7 +4,7 @@ import Splash from './components/Splash';
 import About from './components/About';
 import Events from './components/Events'
 import Members from './components/Members';
-import Footer from './components/Footer'
+import Footer from './components/Footer';
 
 function App() {
   return (
@@ -13,7 +13,7 @@ function App() {
       <Splash />
       <About />
       <Events />
-      <img src='/divider.jpg' alt='code on a screen. mostly css' />
+      <img className="divider" src="/divider.jpg" alt="code on a screen. mostly css"/>
       <Members />
       <Footer />
     </div>
