@@ -7,7 +7,7 @@ const useEvents = () => {
   const fetchData = async () => {
     try {
       const response = await fetch(
-        'https://docs.google.com/document/d/1OcnWWt1qHaJWE-8v_FPtNO8DKviRQ7DMaqylupuvPXE/export?format=txt'
+        'https://docs.google.com/document/d/15CscXC8lA0vGlAn9ZxjCX8628f0wStX24wK1DhbxBu4/export?format=txt'
       );
 
       const content = await response.text();
