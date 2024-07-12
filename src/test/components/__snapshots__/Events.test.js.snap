@@ -1125,6 +1125,8 @@ exports[`Events renders without events 1`] = `
     <br />
     <a
       href="https://www.meetup.com/techlifecolumbus/events/"
+      rel="noreferrer"
+      target="_blank"
     >
       https://www.meetup.com/techlifecolumbus/events/
     </a>

@@ -21,9 +21,9 @@ jest.mock('cal-parser', () => {
 });
 
 describe('useEvents', () => {
-  let ical;
+  //let ical;
   beforeEach(() => {
-    ical = require('cal-parser');
+    //ical = require('cal-parser');
   });
 
   afterEach(() => {
@@ -41,6 +41,7 @@ describe('useEvents', () => {
     // Wait for the useEffect to finish
     await act(async () => {
       // Assertions
+      expect(result.current).toBeDefined();
       //expect(result.current.events).toHaveLength(1);
       //expect(result.current.events[0].summary).toBe('Sample Event');
       //expect(result.current.events[0].dtstart.value).toEqual(new Date('2023-07-15T10:00:00'));

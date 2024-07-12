@@ -1,4 +1,3 @@
-import React from 'react';
 import renderer from 'react-test-renderer';
 import Events from '../../components/Events';
 import * as useEventsModule from '../../hooks/useEvents';
